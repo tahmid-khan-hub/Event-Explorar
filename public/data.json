@@ -1,0 +1,153 @@
+[
+    {
+      "id": "event_001",
+      "name": "Tech Innovators Conference 2025",
+      "thumbnail": "https://i.ibb.co/ZYW3VTp/tech-event.jpg",
+      "category": "Technology",
+      "date": "2025-05-15",
+      "location": "Dhaka Convention Center, Dhaka",
+      "entry_fee": 500,
+      "description": "An exclusive gathering of tech leaders and innovators from around the world."
+    },
+    {
+      "id": "event_002",
+      "name": "Art Fusion Expo",
+      "thumbnail": "https://i.ibb.co/Nr6d2PL/art-event.jpg",
+      "category": "Art",
+      "date": "2025-06-10",
+      "location": "Art Hall, Chattogram",
+      "entry_fee": 200,
+      "description": "An event for creative minds to showcase modern art."
+    },
+    {
+      "id": "event_003",
+      "name": "Startup Meetup 2025",
+      "thumbnail": "https://i.ibb.co/vzFTRvH/startup-event.jpg",
+      "category": "Business",
+      "date": "2025-07-22",
+      "location": "Innovation Hub, Dhaka",
+      "entry_fee": 300,
+      "description": "Connecting startups with investors and industry experts."
+    },
+    {
+      "id": "event_004",
+      "name": "Gaming Festival Bangladesh",
+      "thumbnail": "https://i.ibb.co/qYg7bpD/gaming-event.jpg",
+      "category": "Gaming",
+      "date": "2025-08-15",
+      "location": "Gaming Arena, Sylhet",
+      "entry_fee": 150,
+      "description": "A massive LAN party and gaming competition."
+    },
+    {
+      "id": "event_005",
+      "name": "Health & Wellness Summit",
+      "thumbnail": "https://i.ibb.co/t8p9ZFt/health-event.jpg",
+      "category": "Health",
+      "date": "2025-09-05",
+      "location": "Wellness Center, Dhaka",
+      "entry_fee": 100,
+      "description": "Discussions and workshops about healthy living."
+    },
+    {
+      "id": "event_006",
+      "name": "Eco Future Expo",
+      "thumbnail": "https://i.ibb.co/YXJfnyf/environment-event.jpg",
+      "category": "Environment",
+      "date": "2025-10-12",
+      "location": "Green Park, Khulna",
+      "entry_fee": 250,
+      "description": "Ideas and innovations for a sustainable future."
+    },
+    {
+      "id": "event_007",
+      "name": "Robotics Championship",
+      "thumbnail": "https://i.ibb.co/DzWfT2h/robotics-event.jpg",
+      "category": "Technology",
+      "date": "2025-11-19",
+      "location": "Robotics Lab, Dhaka",
+      "entry_fee": 350,
+      "description": "Battle of bots and AI tech showdown."
+    },
+    {
+      "id": "event_008",
+      "name": "Film & Culture Night",
+      "thumbnail": "https://i.ibb.co/tHpM8CM/film-event.jpg",
+      "category": "Entertainment",
+      "date": "2025-12-20",
+      "location": "Cinema Hall, Rajshahi",
+      "entry_fee": 180,
+      "description": "Showcasing local short films and performances."
+    },
+    {
+      "id": "event_009",
+      "name": "Web3 Developers Bootcamp",
+      "thumbnail": "https://i.ibb.co/kKcRpbm/web3-event.jpg",
+      "category": "Technology",
+      "date": "2026-01-05",
+      "location": "CodeLab, Dhaka",
+      "entry_fee": 600,
+      "description": "Hands-on workshop to build smart contracts and DApps."
+    },
+    {
+      "id": "event_010",
+      "name": "Photography Masterclass",
+      "thumbnail": "https://i.ibb.co/hsHnntY/photo-event.jpg",
+      "category": "Photography",
+      "date": "2026-02-10",
+      "location": "Studio One, Chattogram",
+      "entry_fee": 220,
+      "description": "Learn portrait and landscape photography from pros."
+    },
+    {
+      "id": "event_011",
+      "name": "Digital Marketing Workshop",
+      "thumbnail": "https://i.ibb.co/D56cN3C/marketing-event.jpg",
+      "category": "Business",
+      "date": "2026-03-15",
+      "location": "BizHub, Sylhet",
+      "entry_fee": 280,
+      "description": "Strategies and tools for modern marketing."
+    },
+    {
+      "id": "event_012",
+      "name": "E-Sports Bangladesh 2026",
+      "thumbnail": "https://i.ibb.co/kKjHzxY/esports-event.jpg",
+      "category": "Gaming",
+      "date": "2026-04-18",
+      "location": "Gaming Arena, Dhaka",
+      "entry_fee": 400,
+      "description": "Join the national e-sports championship."
+    },
+    {
+      "id": "event_013",
+      "name": "AI for Everyone",
+      "thumbnail": "https://i.ibb.co/sQzKD7c/ai-event.jpg",
+      "category": "Technology",
+      "date": "2026-05-22",
+      "location": "Future Tech Hall, Khulna",
+      "entry_fee": 320,
+      "description": "Demystifying AI and its real-world applications."
+    },
+    {
+      "id": "event_014",
+      "name": "Literature & Book Fair",
+      "thumbnail": "https://i.ibb.co/yNfcF7C/book-event.jpg",
+      "category": "Literature",
+      "date": "2026-06-30",
+      "location": "Library Grounds, Dhaka",
+      "entry_fee": 80,
+      "description": "Books, authors, readings and signings."
+    },
+    {
+      "id": "event_015",
+      "name": "Music Mania 2026",
+      "thumbnail": "https://i.ibb.co/s6JF15W/music-event.jpg",
+      "category": "Music",
+      "date": "2026-07-28",
+      "location": "Open Stage, Rajshahi",
+      "entry_fee": 260,
+      "description": "Live music by top bands and indie artists."
+    }
+  ]
+  
