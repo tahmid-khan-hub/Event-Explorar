@@ -128,26 +128,6 @@
       "location": "Future Tech Hall, Khulna",
       "entry_fee": 320,
       "description": "Demystifying AI and its real-world applications."
-    },
-    {
-      "id": "event_014",
-      "name": "Literature & Book Fair",
-      "thumbnail": "https://i.ibb.co/yNfcF7C/book-event.jpg",
-      "category": "Literature",
-      "date": "2026-06-30",
-      "location": "Library Grounds, Dhaka",
-      "entry_fee": 80,
-      "description": "Books, authors, readings and signings."
-    },
-    {
-      "id": "event_015",
-      "name": "Music Mania 2026",
-      "thumbnail": "https://i.ibb.co/s6JF15W/music-event.jpg",
-      "category": "Music",
-      "date": "2026-07-28",
-      "location": "Open Stage, Rajshahi",
-      "entry_fee": 260,
-      "description": "Live music by top bands and indie artists."
     }
   ]
   
