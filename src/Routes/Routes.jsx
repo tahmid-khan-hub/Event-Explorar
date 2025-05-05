@@ -4,6 +4,7 @@ import Home from "../components/Home/Home";
 import EventDetails from "../components/EventDetails/EventDetails";
 import Login from "../components/Login/Login";
 import Register from "../components/Register/Register";
+import Faq from "../components/Faq/Faq";
 
 const router = createBrowserRouter([
     {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
         {
           path: "register",
           element: <Register></Register>,
+        },
+        {
+          path: "faq",
+          element: <Faq></Faq>,
         }
       ]
     },
