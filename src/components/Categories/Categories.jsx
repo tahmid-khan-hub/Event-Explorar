@@ -11,8 +11,8 @@ import { MdMonochromePhotos } from "react-icons/md";
 const Categories = () => {
     return (
         <div>
-            <h1 className='text-3xl font-bold'>Categories</h1>
-            <p>different types of Categories</p>
+            <h1 className='text-3xl font-bold text-center mt-24'>Categories</h1>
+            <p className='text-center text-gray-600 mt-5 mb-9'>Browse through our curated categories to easily find events that match your interests. Whether you're looking to learn a new skill, cheer on your favorite team, or immerse yourself in the local arts scene, our platform provides all the details you need.</p>
             <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-7'>
 
                 {/* gaming */}
