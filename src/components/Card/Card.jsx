@@ -18,7 +18,6 @@ const Card = ({card}) => {
         <p className="mt-2 text-gray-700 line-clamp-3">{card.description}</p>
         <div className="mt-4 flex justify-between items-center">
             <span className="text-sm text-blue-600 font-medium">{card.category}</span>
-            <span className="text-sm text-green-600 font-bold">${card.entry_fee}</span>
         </div>
         <Link to={`/eventDetails/${card.id}`}>
         <button className="btn mt-8 w-full font-semibold py-2 px-4 rounded-xl ">

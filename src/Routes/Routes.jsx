@@ -5,6 +5,7 @@ import EventDetails from "../components/EventDetails/EventDetails";
 import Login from "../components/Login/Login";
 import Register from "../components/Register/Register";
 import Faq from "../components/Faq/Faq";
+import ErrorPage from "../components/ErrorPage/ErrorPage";
 
 const router = createBrowserRouter([
     {
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
         }
       ]
     },
+    {
+      path: "*",
+      element: <ErrorPage></ErrorPage>
+    }
   ]);
 
 export default router;
