@@ -1,6 +1,7 @@
 import React from "react";
 import { LuCircleUser } from "react-icons/lu";
 import { NavLink } from "react-router";
+import './Navbar.css'
 
 const Navbar = () => {
 

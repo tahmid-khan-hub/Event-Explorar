@@ -1,0 +1,6 @@
+a.active{
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    font-weight: 700;
+    text-underline-offset: 6px;
+}
