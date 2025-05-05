@@ -17,7 +17,7 @@
       "date": "2025-06-10",
       "location": "Art Hall, Chattogram",
       "entry_fee": 200,
-      "description": "An event for creative minds to showcase modern art."
+      "description": "An event for creative minds to showcase modern art. Explore diverse expressions, styles, and stories."
     },
     {
       "id": "event_003",
@@ -27,7 +27,7 @@
       "date": "2025-07-22",
       "location": "Innovation Hub, Dhaka",
       "entry_fee": 300,
-      "description": "Connecting startups with investors and industry experts."
+      "description": "Connecting startups with investors and industry experts, Gain insights, network strategically."
     },
     {
       "id": "event_004",
