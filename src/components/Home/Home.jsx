@@ -2,7 +2,7 @@ import React from 'react';
 import Slider from '../Slider/Slider';
 import Categories from '../Categories/Categories';
 import UpcomingEvents from '../UpcomingEvents/UpcomingEvents';
-import About from '../About/About';
+import Ratings from '../Ratings/Ratings';
 
 const Home = () => {
     return (
@@ -11,7 +11,7 @@ const Home = () => {
             <Slider></Slider>
             <UpcomingEvents></UpcomingEvents>
             <Categories></Categories>
-            <About></About>
+            <Ratings></Ratings>
         </div>
     );
 };
