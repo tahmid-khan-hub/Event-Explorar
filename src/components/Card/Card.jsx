@@ -2,14 +2,14 @@ import React from 'react';
 
 const Card = ({card}) => {
 
-    
+    console.log(card.thumbnail);
 
     return (
         <div className="bg-white rounded-2xl shadow-md overflow-hidden flex flex-col">
     <img
         src={card.thumbnail}
         alt={card.name}
-        className="w-full h-48 object-cover"
+        className="w-full h-56 object-cover p-3 rounded-2xl mt-3"
     />
     <div className="p-4 flex flex-col flex-grow">
         <h3 className="text-xl font-semibold">{card.name}</h3>

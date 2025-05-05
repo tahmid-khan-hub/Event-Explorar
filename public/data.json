@@ -12,7 +12,7 @@
     {
       "id": "event_002",
       "name": "Art Fusion Expo",
-      "thumbnail": "https://i.ibb.co/Nr6d2PL/art-event.jpg",
+      "thumbnail": "https://i.ibb.co/KpQNp3hj/d167c29c-c52e-4369-9100-a14c67100b53.jpg",
       "category": "Art",
       "date": "2025-06-10",
       "location": "Art Hall, Chattogram",
@@ -118,16 +118,7 @@
       "location": "Gaming Arena, Dhaka",
       "entry_fee": 400,
       "description": "Join the national e-sports championship."
-    },
-    {
-      "id": "event_013",
-      "name": "AI for Everyone",
-      "thumbnail": "https://i.ibb.co/sQzKD7c/ai-event.jpg",
-      "category": "Technology",
-      "date": "2026-05-22",
-      "location": "Future Tech Hall, Khulna",
-      "entry_fee": 320,
-      "description": "Demystifying AI and its real-world applications."
     }
+    
   ]
   
