@@ -1,12 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 
 const Card = ({card}) => {
 
-    console.log(card.thumbnail);
+    useEffect(() => {
+        AOS.init({
+          duration: 1000,
+          once: false, 
+        });
+      }, []);
 
     return (
-        <div className="bg-white rounded-2xl shadow-md overflow-hidden flex flex-col">
+        <div data-aos="zoom-in" className="bg-white rounded-2xl shadow-md overflow-hidden flex flex-col">
     <img
         src={card.thumbnail}
         alt={card.name}
