@@ -52,7 +52,7 @@ const Register = () => {
         </form>
         <p className="mt-3 font-semibold ">
           Already have an account? Please{" "}
-          <Link className="text-blue-500 font-bold">Login</Link>
+          <Link to={`/login`} className="text-blue-500 font-bold">Login</Link>
         </p>
 
         {/* Google */}

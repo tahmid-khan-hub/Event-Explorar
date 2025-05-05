@@ -74,7 +74,7 @@ const Login = () => {
         </form>
         <p className="mt-3 font-semibold ">
           New to this site? Please{" "}
-          <Link className="text-blue-500 font-bold">Register</Link>
+          <Link to={`/register`} className="text-blue-500 font-bold">Register</Link>
         </p>
       </div>
     </div>
