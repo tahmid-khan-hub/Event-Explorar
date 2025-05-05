@@ -6,6 +6,7 @@ import Login from "../components/Login/Login";
 import Register from "../components/Register/Register";
 import Faq from "../components/Faq/Faq";
 import ErrorPage from "../components/ErrorPage/ErrorPage";
+import Category from "../components/Category/Category";
 
 const router = createBrowserRouter([
     {
@@ -33,6 +34,11 @@ const router = createBrowserRouter([
         {
           path: "faq",
           element: <Faq></Faq>,
+        },
+        {
+          path: "Category/:category",
+          element: <Category></Category>,
+          loader: ()=> fetch("/data.json"),
         }
       ]
     },
