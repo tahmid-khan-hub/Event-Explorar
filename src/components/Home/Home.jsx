@@ -7,7 +7,6 @@ import Ratings from '../Ratings/Ratings';
 const Home = () => {
     return (
         <div>
-            home
             <Slider></Slider>
             <UpcomingEvents></UpcomingEvents>
             <Categories></Categories>

@@ -2,6 +2,8 @@ import { createBrowserRouter } from "react-router";
 import HomeLayout from "../layout/HomeLayout";
 import Home from "../components/Home/Home";
 import EventDetails from "../components/EventDetails/EventDetails";
+import Login from "../components/Login/Login";
+import Register from "../components/Register/Register";
 
 const router = createBrowserRouter([
     {
@@ -17,6 +19,14 @@ const router = createBrowserRouter([
           path: "eventDetails/:id",
           element: <EventDetails></EventDetails>,
           loader: ()=> fetch("/data.json"),
+        },
+        {
+          path: "login",
+          element: <Login></Login>,
+        },
+        {
+          path: "register",
+          element: <Register></Register>,
         }
       ]
     },
