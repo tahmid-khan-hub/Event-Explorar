@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router";
 import HomeLayout from "../layout/HomeLayout";
 import Home from "../components/Home/Home";
+import EventDetails from "../components/EventDetails/EventDetails";
 
 const router = createBrowserRouter([
     {
@@ -8,10 +9,15 @@ const router = createBrowserRouter([
       element: <HomeLayout></HomeLayout>,
       children: [
         {
-          path:"",
+          path: "",
           element: <Home></Home>,
           loader: ()=> fetch("/data.json"),
         },
+        {
+          path: "eventDetails/:id",
+          element: <EventDetails></EventDetails>,
+          loader: ()=> fetch("/data.json"),
+        }
       ]
     },
   ]);

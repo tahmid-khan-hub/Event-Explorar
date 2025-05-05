@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 const Card = ({card}) => {
 
@@ -19,9 +20,11 @@ const Card = ({card}) => {
             <span className="text-sm text-blue-600 font-medium">{card.category}</span>
             <span className="text-sm text-green-600 font-bold">${card.entry_fee}</span>
         </div>
+        <Link to={`/eventDetails/${card.id}`}>
         <button className="btn mt-8 w-full font-semibold py-2 px-4 rounded-xl ">
             View More
         </button>
+        </Link>
     </div>
 </div>
     );
