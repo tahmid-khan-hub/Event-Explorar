@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLoaderData, useParams } from 'react-router';
+import {  useLoaderData, useParams } from 'react-router';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
@@ -19,9 +19,15 @@ const EventDetails = () => {
         });
     }, []);
 
-    const handleReserveSeat = () => {
-        alert(`Seat reserved for "${event.name}"`);
-    };
+    const handleReserveSeat = e =>{
+        e.preventDefault();
+
+        const name = e.target.name.value;
+        const email = e.target.email.value;
+
+        console.log(name, email);
+    }
+    
 
     return (
         <>
@@ -58,15 +64,33 @@ const EventDetails = () => {
                 </div>
             </div>
 
-            <div className='w-11/12  lg:w-[1000px] mx-auto rounded-2xl my-12 mb-44'>
+            <div className='w-11/12  lg:w-[1000px] mx-auto rounded-2xl my-12 mt-24 mb-44'>
                 
                 <div className='  mb-7'>
-                    <button
-                        onClick={handleReserveSeat}
-                        className='btn w-full text-white rounded-4xl bg-green-600'
-                    >
-                        Reserve Your Seat Now
-                    </button>
+                    <h1 className='text-3xl text-center font-semibold'>Reserve Seat</h1>
+                    <p className='text-center mt-2 mb-12'>You can reserve your seat for this upcoming event. For that you need to submit this form</p>
+
+                    <form onSubmit={handleReserveSeat} data-aos="zoom-in-down" className='fieldset rounded-xl py-11 px-3 md:px-0 w-11/12 md:w-[600px] mx-auto shadow-xl bg-base-200'>
+
+                    <input
+                        type="text"
+                        className="input mb-3 mx-auto"
+                        name="name"
+                        placeholder="Enter your Name"
+                        required
+                    />
+                    <input
+                        type="email"
+                        className="input mb-3 mx-auto"
+                        name="email"
+                        placeholder="Enter your Email"
+                        required
+                    />
+
+                        <button className='btn mt-5 w-[200px] mx-auto'>Reserve Your Seat Now</button>                    
+
+                    </form>
+                    
                 </div>
             </div>
         </>

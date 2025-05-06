@@ -10,6 +10,7 @@ import Category from "../components/Category/Category";
 import Loading from "../components/Loading/Loading";
 import Profile from "../components/Profile/Profile";
 import PrivateRoute from "../Provider/PrivateRoute"
+import Bookings from "../components/Bookings/Bookings";
 
 const router = createBrowserRouter([
     {
@@ -24,7 +25,9 @@ const router = createBrowserRouter([
         },
         {
           path: "eventDetails/:id",
-          element: <EventDetails></EventDetails>,
+          element: <PrivateRoute>
+            <EventDetails></EventDetails>
+          </PrivateRoute>,
           loader: ()=> fetch("/data.json"),
           hydrateFallbackElement: <Loading></Loading>,
         },
@@ -48,7 +51,7 @@ const router = createBrowserRouter([
         },
         {
           path: "bookings",
-          
+          element: <Bookings></Bookings>,
         },
         {
           path: "profile",
