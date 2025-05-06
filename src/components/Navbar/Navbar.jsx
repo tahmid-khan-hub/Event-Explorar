@@ -3,6 +3,7 @@ import { LuCircleUser } from "react-icons/lu";
 import { Link, NavLink } from "react-router";
 import './Navbar.css'
 import { AuthContext } from "../../Provider/AuthProvider";
+import userimg from "../../assets/user.jpg"
 
 const Navbar = () => {
 
@@ -61,8 +62,8 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <LuCircleUser size={30} className="mr-3"></LuCircleUser>
-        {/* <a className="btn">Sign In</a> */}
+        {/* <LuCircleUser size={30} className="mr-3"></LuCircleUser> */}
+        <img className="w-9 h-9 mr-3 object-cover rounded-full " src={`${user? user.photoURL : userimg}`} alt="" />
         {user ? <button onClick={handleLogOut} className="btn">Log Out</button> : <Link to="/login"><button className="btn">Login</button></Link>}
       </div>
     </div>
