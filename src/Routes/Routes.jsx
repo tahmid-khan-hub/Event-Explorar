@@ -12,6 +12,7 @@ import Profile from "../components/Profile/Profile";
 import PrivateRoute from "../Provider/PrivateRoute"
 import Bookings from "../components/Bookings/Bookings";
 import About from "../components/About/About";
+import UpdateProfile from "../components/UpdateProfile/UpdateProfile";
 
 const router = createBrowserRouter([
     {
@@ -67,6 +68,12 @@ const router = createBrowserRouter([
         {
           path: "about",
           element: <About></About>,
+        },
+        {
+          path: "updateProfile",
+          element: <PrivateRoute>
+            <UpdateProfile></UpdateProfile>
+          </PrivateRoute>,
         }
       ]
     },
