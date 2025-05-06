@@ -1,8 +1,11 @@
-import React, { use } from "react";
+import React, { use, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../../Provider/AuthProvider";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Login = () => {
+
+  const [show, setShow] = useState(false);
 
   const {signIn} = use(AuthContext)
 
@@ -41,13 +44,18 @@ const Login = () => {
             required
           />
           <label className="label">Password</label>
-          <input
-            type="password"
-            className="input mb-3"
-            name="password"
-            placeholder="Enter your Password"
-            required
-          />
+          <div className="flex relative">
+            <input
+              type={`${show ? "text" : "password"}`}
+              className="input mb-3"
+              name="password"
+              placeholder="Enter your Password"
+              required
+            />
+            <span onClick={()=> setShow(!show)}  className="absolute right-7 top-2 cursor-pointer">
+            {show ? <FaEyeSlash size={20} /> : <FaEye size={20} />}
+            </span>
+          </div>
           <div>
             <a className="link link-hover ">Forgot password?</a>
           </div>

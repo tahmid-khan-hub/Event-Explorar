@@ -7,14 +7,14 @@ import { AuthContext } from "../../Provider/AuthProvider";
 import { toast } from "react-toastify";
 
 const EventDetails = () => {
-  const { bookEvent, bookings } = use(AuthContext);
+  const { bookEvent, bookings, user } = use(AuthContext);
 
   const { id } = useParams();
   const data = useLoaderData();
 
   const event = data.find((e) => e.id === id);
 
-  const [booked, setBooked] = useState(bookings[id] || false);
+  const [booked, setBooked] = useState(!!bookings[id]);
 
   const navigate = useNavigate();
 
@@ -27,6 +27,10 @@ const EventDetails = () => {
     });
   }, []);
 
+  useEffect(() => {
+    setBooked(!!bookings[id]);
+  }, [bookings, id]);
+
   const handleReserveSeat = (e) => {
     e.preventDefault();
 
@@ -35,15 +39,21 @@ const EventDetails = () => {
 
     console.log(name, email);
 
-    if (name && email) {
+    if (name === user.displayName && email === user.email) {
       setBooked(true);
       bookEvent(id);
       navigate("/bookings");
+      toast.success("Seat Booked Successfully !");
+      return;
     }
+    
 
-    if(name && email){
-        toast.success("Seat Booked Successfully !");
-        return;
+    // if(name === user.displayName && email === user.email){
+    //     toast.success("Seat Booked Successfully !");
+    //     return;
+    // }
+    else{
+      toast.error("Please Enter valid Email and Name");
     }
   };
 
