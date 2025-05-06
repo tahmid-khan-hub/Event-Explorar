@@ -62,7 +62,7 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <Link to="/profile"><img className="w-9 h-9 mr-3 object-cover rounded-full " src={`${user? user.photoURL : userimg}`} alt="" title={user ? user.displayName : ""}/></Link>
+        <Link to="/updateProfile"><img className="w-9 h-9 mr-3 object-cover rounded-full " src={`${user? user.photoURL : userimg}`} alt="" title={user ? user.displayName : ""}/></Link>
         
         {user ? <button onClick={handleLogOut} className="btn">Log Out</button> : <Link to="/login"><button className="btn">Login</button></Link>}
       </div>
