@@ -9,6 +9,7 @@ import ErrorPage from "../components/ErrorPage/ErrorPage";
 import Category from "../components/Category/Category";
 import Loading from "../components/Loading/Loading";
 import Profile from "../components/Profile/Profile";
+import PrivateRoute from "../Provider/PrivateRoute"
 
 const router = createBrowserRouter([
     {
@@ -51,7 +52,9 @@ const router = createBrowserRouter([
         },
         {
           path: "profile",
-          element: <Profile></Profile>,
+          element: <PrivateRoute>
+            <Profile></Profile>
+          </PrivateRoute>
         }
       ]
     },

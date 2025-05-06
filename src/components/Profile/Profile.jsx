@@ -2,6 +2,9 @@ import React, { useContext, useState } from 'react';
 import { AuthContext } from '../../Provider/AuthProvider';
 import { updateProfile } from 'firebase/auth';
 import { useNavigate } from 'react-router';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 
 const Profile = () => {
   const { user } = useContext(AuthContext);
@@ -12,6 +15,13 @@ const Profile = () => {
   const [error, setError] = useState('');
 
   const navigate = useNavigate();
+
+  useEffect(() => {
+        AOS.init({
+        duration: 1000,
+        once: false, 
+      });
+    }, []);
 
   const handleSave = () => {
     if (!displayName.trim()) {
@@ -36,7 +46,8 @@ const Profile = () => {
   };
 
   return (
-    <div className="max-w-md mx-auto mt-10 mb-24 p-6 bg-base-200 rounded-lg shadow-xl ">
+    <div data-aos="fade-up"
+    data-aos-anchor-placement="top-center" className="max-w-md mx-auto mt-10 mb-24 p-6 bg-base-200 rounded-lg shadow-xl ">
       <h2 className="text-2xl font-bold text-center mb-4">Your Profile</h2>
 
       <div className="flex justify-center mb-4">
