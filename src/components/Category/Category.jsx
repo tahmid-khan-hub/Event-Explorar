@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLoaderData, useParams } from 'react-router';
+import CategoryDetails from '../CategoryDetails/CategoryDetails';
 
 const Category = () => {
 
@@ -9,10 +10,15 @@ const Category = () => {
     const data = useLoaderData();
     console.log(data);
 
+    const types =  data.filter(c => c.category == category)
+
+    console.log(types);
 
     return (
         <div>
-            
+            {
+                types.map((category, index)=> <CategoryDetails key={index} category={category}></CategoryDetails>)
+            }
         </div>
     );
 };
