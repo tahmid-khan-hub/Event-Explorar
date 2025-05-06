@@ -15,7 +15,7 @@ const Category = () => {
     console.log(types);
 
     return (
-        <div>
+        <div className='grid grid-cols-1'>
             {
                 types.map((category, index)=> <CategoryDetails key={index} category={category}></CategoryDetails>)
             }
