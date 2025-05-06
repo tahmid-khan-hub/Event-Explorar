@@ -1,9 +1,22 @@
-import React from "react";
+import React, { use } from "react";
 import { LuCircleUser } from "react-icons/lu";
-import { NavLink } from "react-router";
+import { Link, NavLink } from "react-router";
 import './Navbar.css'
+import { AuthContext } from "../../Provider/AuthProvider";
 
 const Navbar = () => {
+
+  const {user, logOut} = use(AuthContext);
+
+  const handleLogOut = () =>{
+    logOut()
+      .then(res =>{
+        console.log(res);
+      })
+      .catch(err =>{
+        console.log(err);
+      })
+  }
 
     const links = <>
         <NavLink className="mr-3" to="/">Home</NavLink>
@@ -49,7 +62,8 @@ const Navbar = () => {
       </div>
       <div className="navbar-end">
         <LuCircleUser size={30} className="mr-3"></LuCircleUser>
-        <a className="btn">Sign In</a>
+        {/* <a className="btn">Sign In</a> */}
+        {user ? <button onClick={handleLogOut} className="btn">Log Out</button> : <Link to="/login"><button className="btn">Login</button></Link>}
       </div>
     </div>
   );
