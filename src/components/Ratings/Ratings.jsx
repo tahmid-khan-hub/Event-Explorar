@@ -1,5 +1,8 @@
 import React from "react";
 import { FaUserCircle } from "react-icons/fa";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 
 const testimonials = [
   {
@@ -25,12 +28,20 @@ const testimonials = [
 ];
 
 const Ratings = () => {
+
+  useEffect(() => {
+      AOS.init({
+      duration: 1000,
+      once: false, 
+    });
+  }, []);
+
   return (
     <section className="px-4 py-12 bg-gray-50 text-center my-24">
       <h2 className="text-3xl font-bold mb-8">What Our Users Say</h2>
       <div className="flex flex-wrap justify-center gap-6">
         {testimonials.map((user, index) => (
-          <div
+          <div data-aos="flip-up"
             key={index}
             className="bg-white rounded-2xl shadow-md p-6 max-w-xs text-left"
           >
