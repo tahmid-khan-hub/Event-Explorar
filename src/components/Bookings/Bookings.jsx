@@ -40,7 +40,7 @@ const Bookings = () => {
 
   return (
     <div className="max-w-5xl mx-auto my-12 px-4">
-      <h1 className="text-3xl font-bold mb-6 text-center">Your Bookings</h1>
+      <h1 data-aos="zoom-in-up" className="text-3xl font-bold mb-6 text-center">Your Bookings</h1>
 
       {bookingEvents.length > 0 ? (
         bookingEvents.map((event, index) => (
@@ -77,7 +77,7 @@ const Bookings = () => {
           </div>
         ))
       ) : (
-        <div className="text-center text-xl text-gray-500 mt-20">
+        <div data-aos="zoom-in-up" className="text-center text-xl text-gray-500 mt-20">
           🚫 No reserved seat booked yet.
         </div>
       )}
