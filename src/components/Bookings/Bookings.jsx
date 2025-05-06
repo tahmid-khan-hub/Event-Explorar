@@ -1,11 +1,88 @@
-import React from 'react';
+import React, { use, useEffect, useState } from "react";
+import { AuthContext } from "../../Provider/AuthProvider";
+import { useLoaderData } from "react-router";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Bookings = () => {
-    return (
-        <div>
-            bookings
+  const { user, bookings, setBookings } = use(AuthContext);
+  const allEvents = useLoaderData();
+
+  console.log(allEvents);
+
+  const [bookingEvents, setBookingEvents] = useState([]);
+
+  useEffect(() => {
+    const filtered = allEvents.filter((event) => bookings[event.id]);
+    setBookingEvents(filtered);
+  }, [bookings, allEvents]);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+
+    AOS.init({
+      duration: 1000,
+      once: false,
+    });
+  }, []);
+
+  const handleCancelBooking = (index) => {
+    const removedEvent = bookingEvents[index];
+    const id = removedEvent.id;
+
+    setBookingEvents((prev) => prev.filter((_, i) => i !== index));
+
+    setBookings((prev) => {
+      const updated = { ...prev };
+      delete updated[id];
+      return updated;
+    });
+  };
+
+  return (
+    <div className="max-w-5xl mx-auto my-12 px-4">
+      <h1 className="text-3xl font-bold mb-6 text-center">Your Bookings</h1>
+
+      {bookingEvents.length > 0 ? (
+        bookingEvents.map((event, index) => (
+          <div
+            data-aos="zoom-in-up"
+            key={event.id}
+            className="card bg-base-200 shadow-xl p-4 rounded-xl mb-40"
+          >
+            <h2 className="text-2xl font-bold mb-1">{event.name}</h2>
+            <p className="text-gray-600 mb-1">📍 {event.location}</p>
+            <p className="text-gray-600 mb-1">🗓 {event.date}</p>
+            <p className="text-gray-600 mb-1">
+              🎟 Entry Fee:{" "}
+              <span className="text-green-700 font-bold">
+                {event.entry_fee}
+              </span>{" "}
+              Taka
+            </p>
+
+            <p className="text-green-600 text-right font-semibold mt-11 md:mt-2">
+              ✅ Seat Reserved
+            </p>
+            <p className="text-sm text-right text-gray-400">
+              Booked by: {user?.email}
+            </p>
+
+            <button
+              onClick={() => handleCancelBooking(index)}
+              className="btn w-[150px] mt-11 md:mt-1 bg-red-500 text-white" 
+            >
+              Cancel Booking
+            </button>
+          </div>
+        ))
+      ) : (
+        <div className="text-center text-xl text-gray-500 mt-20">
+          🚫 No reserved seat booked yet.
         </div>
-    );
+      )}
+    </div>
+  );
 };
 
 export default Bookings;

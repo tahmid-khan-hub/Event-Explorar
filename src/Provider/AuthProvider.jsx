@@ -58,6 +58,7 @@ const AuthProvider = ({children}) => {
         updateUser,
         bookEvent,
         bookings,
+        setBookings,
         
     }
 
