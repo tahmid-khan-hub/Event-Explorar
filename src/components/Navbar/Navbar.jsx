@@ -22,7 +22,8 @@ const Navbar = () => {
     const links = <>
         <NavLink className="mr-3" to="/">Home</NavLink>
         <NavLink className="mr-3" to="/booking">Booking</NavLink>
-        <NavLink to="/faq">FaQ</NavLink>
+        <NavLink className="mr-3" to="/faq">FaQ</NavLink>
+        <NavLink to="/profile">Profile</NavLink>
     </>
 
   return (
