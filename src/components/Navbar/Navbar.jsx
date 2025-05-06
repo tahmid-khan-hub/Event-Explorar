@@ -62,8 +62,8 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        {/* <LuCircleUser size={30} className="mr-3"></LuCircleUser> */}
-        <img className="w-9 h-9 mr-3 object-cover rounded-full " src={`${user? user.photoURL : userimg}`} alt="" />
+        <img className="w-9 h-9 mr-3 object-cover rounded-full " src={`${user? user.photoURL : userimg}`} alt="" title={user ? user.displayName : ""}/>
+        
         {user ? <button onClick={handleLogOut} className="btn">Log Out</button> : <Link to="/login"><button className="btn">Login</button></Link>}
       </div>
     </div>
