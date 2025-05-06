@@ -1,5 +1,4 @@
 import React, { use } from "react";
-import { LuCircleUser } from "react-icons/lu";
 import { Link, NavLink } from "react-router";
 import './Navbar.css'
 import { AuthContext } from "../../Provider/AuthProvider";
@@ -55,7 +54,7 @@ const Navbar = () => {
 
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">EventExplorar</a>
+        <a className="btn btn-ghost text-xl">Event<span className="font-bold text-3xl text-blue-600 -mx-1 mb-1">E</span>xplorar</a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
