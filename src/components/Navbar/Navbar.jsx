@@ -64,7 +64,7 @@ const Navbar = () => {
       <div className="navbar-end">
         <Link to="/updateProfile"><img className="w-9 h-9 mr-3 object-cover rounded-full " src={`${user? user.photoURL : userimg}`} alt="" title={user ? user.displayName : ""}/></Link>
         
-        {user ? <button onClick={handleLogOut} className="btn">Log Out</button> : <Link to="/login"><button className="btn">Login</button></Link>}
+        {user ? <button onClick={handleLogOut} className="btn btn-primary px-6 py-2 rounded-md text-white bg-blue-500 hover:bg-blue-600">Log Out</button> : <Link to="/login"><button className="btn btn-primary px-6 py-2 rounded-md text-white bg-blue-500 hover:bg-blue-600">Login</button></Link>}
       </div>
     </div>
   );

@@ -96,7 +96,7 @@ const Register = () => {
             required
           />
 
-          <button className="btn btn-neutral mt-4">Register</button>
+          <button className="btn btn-primary px-6 py-2 rounded-md text-white bg-blue-500 hover:bg-blue-600 mt-4">Register</button>
         </form>
 
         {error && <p className="text-red-500 font-semibold">{error}</p>}

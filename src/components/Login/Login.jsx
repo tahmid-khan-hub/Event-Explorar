@@ -52,9 +52,8 @@ const Login = () => {
             <a className="link link-hover ">Forgot password?</a>
           </div>
 
-          <button className="btn btn-neutral mt-4">Login</button>
+          <button className="btn btn-primary px-6 py-2 rounded-md text-white bg-blue-500 hover:bg-blue-600 mt-4">Login</button>
 
-          {/* <p className="font-semibold text-center">or</p> */}
 
           {/* Google */}
           <button className="btn my-4 bg-white text-black border-[#e5e5e5]">

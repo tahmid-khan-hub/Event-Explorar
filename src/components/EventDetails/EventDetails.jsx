@@ -122,7 +122,7 @@ const EventDetails = () => {
                 Seat already booked
               </button>
             ) : (
-              <button className="btn mt-5 w-[200px] mx-auto">
+              <button className="btn mt-5 w-[200px] btn-primary px-6 py-2 rounded-md text-white bg-blue-500 hover:bg-blue-600 mx-auto">
                 Reserve Your Seat Now
               </button>
             )}
