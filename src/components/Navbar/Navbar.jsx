@@ -22,7 +22,7 @@ const Navbar = () => {
         <NavLink className="mr-3" to="/">Home</NavLink>
         <NavLink className="mr-3" to="/bookings">Booking</NavLink>
         <NavLink className="mr-3" to="/faq">FaQ</NavLink>
-        <NavLink to="/profile">Profile</NavLink>
+        <NavLink to="/about">About Us</NavLink>
     </>
 
   return (
@@ -54,7 +54,7 @@ const Navbar = () => {
 
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl -ml-3">Event<span className="font-bold text-3xl text-blue-600 -mx-1 mb-1">E</span>xplorar</a>
+        <a className="btn btn-ghost text-xl -ml-3">Event<span className="font-bold text-3xl text-blue-600 -mx-1 mb-1">E</span>xplorer</a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
@@ -62,7 +62,7 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <img className="w-9 h-9 mr-3 object-cover rounded-full " src={`${user? user.photoURL : userimg}`} alt="" title={user ? user.displayName : ""}/>
+        <Link to="/profile"><img className="w-9 h-9 mr-3 object-cover rounded-full " src={`${user? user.photoURL : userimg}`} alt="" title={user ? user.displayName : ""}/></Link>
         
         {user ? <button onClick={handleLogOut} className="btn">Log Out</button> : <Link to="/login"><button className="btn">Login</button></Link>}
       </div>

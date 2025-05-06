@@ -11,6 +11,7 @@ import Loading from "../components/Loading/Loading";
 import Profile from "../components/Profile/Profile";
 import PrivateRoute from "../Provider/PrivateRoute"
 import Bookings from "../components/Bookings/Bookings";
+import About from "../components/About/About";
 
 const router = createBrowserRouter([
     {
@@ -62,6 +63,10 @@ const router = createBrowserRouter([
           element: <PrivateRoute>
             <Profile></Profile>
           </PrivateRoute>
+        },
+        {
+          path: "about",
+          element: <About></About>,
         }
       ]
     },
