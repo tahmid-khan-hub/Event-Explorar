@@ -3,12 +3,11 @@ import { AuthContext } from "../../Provider/AuthProvider";
 import { useLoaderData } from "react-router";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { toast } from "react-toastify";
 
 const Bookings = () => {
   const { user, bookings, setBookings } = use(AuthContext);
   const allEvents = useLoaderData();
-
-  console.log(allEvents);
 
   const [bookingEvents, setBookingEvents] = useState([]);
 
@@ -69,7 +68,8 @@ const Bookings = () => {
             </p>
 
             <button
-              onClick={() => handleCancelBooking(index)}
+              onClick={() => {handleCancelBooking(index), toast.error('Booking Cancelled !'
+              )}}
               className="btn w-[150px] mt-11 md:mt-1 bg-red-500 text-white" 
             >
               Cancel Booking
