@@ -10,6 +10,7 @@ const AuthProvider = ({children}) => {
 
     const [user, setUser] = useState(null)
     const [loading, setLoading] = useState(true);
+    const [bookings, setBookings] = useState({});
 
     console.log(user);
 
@@ -31,6 +32,11 @@ const AuthProvider = ({children}) => {
         return signOut(auth);
     }
 
+    const bookEvent = (eventId) => {
+        setBookings(prev => ({ ...prev, [eventId]: true }));
+    };
+      
+
     useEffect(()=>{
         const unsubscribe = onAuthStateChanged(auth, (currentUser) =>{
             setUser(currentUser);
@@ -50,6 +56,8 @@ const AuthProvider = ({children}) => {
         setLoading,
         logOut,
         updateUser,
+        bookEvent,
+        bookings,
         
     }
 

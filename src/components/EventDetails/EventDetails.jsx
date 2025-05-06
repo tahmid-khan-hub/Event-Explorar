@@ -1,14 +1,22 @@
-import React from 'react';
-import {  useLoaderData, useParams } from 'react-router';
+import React, { use, useState } from 'react';
+import {  Link, useLoaderData, useNavigate, useParams } from 'react-router';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
+import { AuthContext } from '../../Provider/AuthProvider';
 
 const EventDetails = () => {
+
+    const {bookEvent, bookings} = use(AuthContext);
+
     const { id } = useParams();
     const data = useLoaderData();
 
     const event = data.find(e => e.id === id);
+
+    const [booked, setBooked] = useState(bookings[id] || false);
+
+    const navigate = useNavigate();
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -26,6 +34,14 @@ const EventDetails = () => {
         const email = e.target.email.value;
 
         console.log(name, email);
+
+        if(name && email){
+
+            setBooked(true);
+            bookEvent(id);
+            navigate("/bookings")
+            
+        }
     }
     
 
@@ -87,7 +103,10 @@ const EventDetails = () => {
                         required
                     />
 
-                        <button className='btn mt-5 w-[200px] mx-auto'>Reserve Your Seat Now</button>                    
+                        {/* <button className='btn mt-5 w-[200px] mx-auto'>Reserve Your Seat Now</button>                     */}
+                        {
+                            booked ?  <button disabled className='btn mt-5 w-[200px] mx-auto'> Seat already booked</button> : <button className='btn mt-5 w-[200px] mx-auto'>Reserve Your Seat Now</button>
+                        }
 
                     </form>
                     
