@@ -1,6 +1,8 @@
 import React from 'react';
 import { useLoaderData, useParams } from 'react-router';
-import { FiAlertTriangle } from 'react-icons/fi'; // make sure this is imported
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 
 const EventDetails = () => {
     const { id } = useParams();
@@ -8,13 +10,22 @@ const EventDetails = () => {
 
     const event = data.find(e => e.id === id);
 
+    useEffect(() => {
+        window.scrollTo(0, 0);
+        
+          AOS.init({
+          duration: 1000,
+          once: false, 
+        });
+    }, []);
+
     const handleReserveSeat = () => {
         alert(`Seat reserved for "${event.name}"`);
     };
 
     return (
         <>
-            <div className="max-w-5xl mx-auto my-10 p-6 bg-base-200 rounded-3xl shadow-xl">
+            <div  data-aos="zoom-in-down" className="max-w-5xl mx-auto my-10 p-6 bg-base-200 rounded-3xl shadow-xl">
                 <div className="text-center mb-20">
                     <h1 className="text-3xl font-bold mb-4">{event.name}</h1>
                     <p className="text-gray-600">{event.description}</p>
