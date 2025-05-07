@@ -1,10 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import Loading from "../Loading/Loading";
 
 const About = () => {
+
+    const [loading, setLoading] = useState(true)
+
+    useEffect(() => {
+              const timeout = setTimeout(() => {
+                setLoading(false);
+              }, 500);
+          
+              return () => clearTimeout(timeout);
+        }, []);
+
     useEffect(() => {
         window.scrollTo(0, 0);
         document.title = "EventExplorer - About"
@@ -14,6 +26,9 @@ const About = () => {
           once: false,
         });
     }, []);
+
+    if(loading) return <Loading></Loading>
+
   return (
     <section data-aos="zoom-in-up" className="p-10 my-36 bg-gray-100 rounded-xl shadow-md max-w-3xl mx-auto ">
       <h2 className="text-3xl font-bold mb-4 text-center">About Us</h2>

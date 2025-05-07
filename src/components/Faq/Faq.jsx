@@ -1,9 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
+import Loading from '../Loading/Loading';
 
 const Faq = () => {
+
+    const [loading, setLoading] = useState(true)
+
+    useEffect(() => {
+          const timeout = setTimeout(() => {
+            setLoading(false);
+          }, 500);
+      
+          return () => clearTimeout(timeout);
+    }, []);
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -13,6 +24,8 @@ const Faq = () => {
           once: false, 
         });
       }, []);
+
+    if(loading) return <Loading></Loading>
 
     return (
         <div className='max-w-11/12 mx-auto md:max-w-[1300px] md:mx-auto'>

@@ -2,17 +2,29 @@ import React, { use, useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import Loading from "../Loading/Loading";
 
 const Register = () => {
   const { createUser, setUser, updateUser, googleSignIn } = use(AuthContext);
   const [error, setError] = useState("");
   const [show, setShow] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   const navigate = useNavigate();
+
+  useEffect(() => {
+      const timeout = setTimeout(() => {
+        setLoading(false);
+      }, 500);
+  
+      return () => clearTimeout(timeout);
+    }, []);
 
   useEffect(()=>{
     document.title = "EventExplorer - Register"
   },[])
+
+  if(loading) return <Loading></Loading>;
 
   const handleRegister = (e) => {
     e.preventDefault();

@@ -11,10 +11,8 @@ import { IoLeafOutline } from 'react-icons/io5';
 const Categories = () => {
   const data = useLoaderData();
 
-  // Get unique categories from data
   const categories = [...new Set(data.map(event => event.category))];
 
-  // Icon mapping for categories
   const categoryIcons = {
     Gaming: <MdSportsEsports size={60} className="mx-auto mb-5" />,
     Art: <FaPaintBrush size={60} className="mx-auto mb-5" />,
@@ -26,7 +24,6 @@ const Categories = () => {
     Photography: <MdMonochromePhotos size={60} className="mx-auto mb-5" />,
   };
 
-  // Initialize AOS
   useEffect(() => {
     AOS.init({
       duration: 2000,

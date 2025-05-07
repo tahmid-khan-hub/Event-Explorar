@@ -2,19 +2,31 @@ import React, { use, useEffect, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import Loading from "../Loading/Loading";
 
 const Login = () => {
 
   const [show, setShow] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   const {signIn, googleSignIn} = use(AuthContext)
 
   const location = useLocation();
   const navigate = useNavigate();
 
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setLoading(false);
+    }, 500);
+
+    return () => clearTimeout(timeout);
+  }, []);
+
   useEffect(()=>{
     document.title = "EventExplorer - Login"
   },[])
+
+  if(loading) return <Loading></Loading>;
 
   const handleLogin = (e) => {
     e.preventDefault();
