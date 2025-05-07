@@ -9,11 +9,12 @@ import { IoIosBusiness } from 'react-icons/io';
 import { IoLeafOutline } from 'react-icons/io5';
 
 const Categories = () => {
-
   const data = useLoaderData();
 
+  // Get unique categories from data
   const categories = [...new Set(data.map(event => event.category))];
 
+  // Icon mapping for categories
   const categoryIcons = {
     Gaming: <MdSportsEsports size={60} className="mx-auto mb-5" />,
     Art: <FaPaintBrush size={60} className="mx-auto mb-5" />,
@@ -25,6 +26,7 @@ const Categories = () => {
     Photography: <MdMonochromePhotos size={60} className="mx-auto mb-5" />,
   };
 
+  // Initialize AOS
   useEffect(() => {
     AOS.init({
       duration: 2000,
@@ -34,17 +36,25 @@ const Categories = () => {
 
   return (
     <div data-aos="fade-up">
-      <h1 className='text-3xl font-bold text-center mt-24'>Categories</h1>
-      <p className='text-center text-gray-600 mt-5 mb-9'>
+      <h1 className="text-3xl font-bold text-center mt-24">Categories</h1>
+      <p className="text-center text-gray-600 mt-5 mb-9">
         Browse through our curated categories to easily find events that match your interests. Whether you're looking to learn a new skill, cheer on your favorite team, or immerse yourself in the local arts scene, our platform provides all the details you need.
       </p>
 
-      <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-7'>
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-7">
         {categories.map(category => (
           <Link to={`/Category/${category}`} key={category}>
-            <div data-aos="fade-up" className='border-2 rounded-xl shadow-xl text-center p-7 hover:shadow-2xl transition-shadow'>
-              {categoryIcons[category] || <span className="text-4xl mb-5 block">🎯</span>}
-              <h2 className='text-xl font-semibold'>{category}</h2>
+            <div
+              data-aos="fade-up"
+              className="bg-white border-2 border-gray-300 rounded-xl shadow-xl text-center p-7 
+              transform transition-transform delay-150 duration-300 ease-in-out 
+             hover:-translate-y-1 hover:scale-110 hover:bg-blue-300 
+             hover:shadow-2xl"
+            >
+              {categoryIcons[category] || (
+                <span className="text-4xl mb-5 block">🎯</span>
+              )}
+              <h2 className="text-xl font-semibold">{category}</h2>
             </div>
           </Link>
         ))}

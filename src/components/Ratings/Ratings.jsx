@@ -43,7 +43,9 @@ const Ratings = () => {
         {testimonials.map((user, index) => (
           <div data-aos="flip-up"
             key={index}
-            className="bg-white rounded-2xl shadow-md p-6 max-w-xs text-left"
+            className="bg-white rounded-2xl shadow-md p-6 max-w-xs text-left transition delay-150 duration-300 ease-in-out 
+             hover:-translate-y-1 hover:scale-110 hover:bg-blue-300 
+             hover:shadow-2xl"
           >
             <p className="text-gray-700 mb-12">"{user.text}"</p>
             <div className="flex items-center gap-3 ">
