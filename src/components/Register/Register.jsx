@@ -4,6 +4,8 @@ import { AuthContext } from "../../Provider/AuthProvider";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import Loading from "../Loading/Loading";
 import { toast } from "react-toastify";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Register = () => {
   const { createUser, setUser, updateUser, googleSignIn } = use(AuthContext);
@@ -11,6 +13,13 @@ const Register = () => {
   const [loading, setLoading] = useState(true);
 
   const navigate = useNavigate();
+
+  useEffect(() => {
+      AOS.init({
+        duration: 1000,
+        once: false,
+      });
+    }, []);
 
   useEffect(() => {
       const timeout = setTimeout(() => {
@@ -80,7 +89,7 @@ const Register = () => {
   };
 
   return (
-    <div className="card bg-base-100 w-full max-w-sm mx-auto mb-56 mt-24 shrink-0 shadow-2xl text-center ">
+    <div data-aos="zoom-in" className="card bg-base-100 w-full max-w-sm mx-auto mb-56 mt-24 shrink-0 shadow-2xl text-center ">
       <div className="card-body">
         <h1 className="text-2xl font-bold mb-3">Register</h1>
         <form onSubmit={handleRegister} className="fieldset">

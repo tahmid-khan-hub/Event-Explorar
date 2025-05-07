@@ -13,6 +13,7 @@ import PrivateRoute from "../Provider/PrivateRoute"
 import Bookings from "../components/Bookings/Bookings";
 import About from "../components/About/About";
 import UpdateProfile from "../components/UpdateProfile/UpdateProfile";
+import ForgetPassword from "../components/ForgetPassword/ForgetPassword";
 
 const router = createBrowserRouter([
     {
@@ -74,6 +75,10 @@ const router = createBrowserRouter([
           element: <PrivateRoute>
             <UpdateProfile></UpdateProfile>
           </PrivateRoute>,
+        },
+        {
+          path: "forgetPassword",
+          element: <ForgetPassword></ForgetPassword>,
         }
       ]
     },

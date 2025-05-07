@@ -3,17 +3,27 @@ import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import Loading from "../Loading/Loading";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { toast } from "react-toastify";
 
 const Login = () => {
 
   const [show, setShow] = useState(false);
   const [loading, setLoading] = useState(true);
+  const [email, setEmail] = useState("")
 
   const {signIn, googleSignIn} = use(AuthContext)
 
   const location = useLocation();
   const navigate = useNavigate();
+
+  useEffect(() => {
+      AOS.init({
+        duration: 1000,
+        once: false,
+      });
+    }, []);
 
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -37,18 +47,6 @@ const Login = () => {
 
     console.log(password, email);
 
-    // if (password.length < 6) {
-    //     toast.error("Password must be 6 character or longer");
-    //     return;
-    // } else if (!/[a-z]/.test(password) || !/[A-Z]/.test(password)) {
-    //     toast.error("Password must include both uppercase and lowercase letters");
-    //     return;
-    // }
-
-    // if(password != user.password){
-    //   toast.error("Enter valid password")
-    //   return;
-    // }
 
     signIn(email, password)
       .then(res =>{
@@ -75,8 +73,12 @@ const Login = () => {
       })
   }
 
+  const handleForgetPassword = () => {
+    navigate("/forgetPassword", { state: { email } });
+  };  
+
   return (
-    <div className="card bg-base-100 w-full max-w-sm mx-auto mb-56 mt-24 shrink-0 shadow-2xl ">
+    <div data-aos="zoom-in" className="card bg-base-100 w-full max-w-sm mx-auto mb-56 mt-24 shrink-0 shadow-2xl ">
       <div className="card-body">
         <h1 className="text-2xl font-bold mb-3 text-center ">Login now!</h1>
         <form onSubmit={handleLogin} className="fieldset">
@@ -86,6 +88,8 @@ const Login = () => {
             className="input mb-3"
             name="email"
             placeholder="Enter your Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             required
           />
           <label className="label">Password</label>
@@ -101,9 +105,9 @@ const Login = () => {
             {show ? <FaEyeSlash size={20} /> : <FaEye size={20} />}
             </span>
           </div>
-          <div>
-            <a className="link link-hover ">Forgot password?</a>
-          </div>
+          
+            <a onClick={handleForgetPassword} className="link link-hover ">Forgot password?</a>
+          
 
           <button className="btn btn-primary px-6 py-2 rounded-md text-white bg-blue-500 hover:bg-blue-600 mt-4">Login</button>
 
