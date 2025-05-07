@@ -5,13 +5,13 @@ import { useNavigate } from 'react-router';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
+import { toast } from 'react-toastify';
 
 const Profile = () => {
   const { user } = useContext(AuthContext);
 
   const [displayName, setDisplayName] = useState(user?.displayName || '');
   const [photoURL, setPhotoURL] = useState(user?.photoURL || '');
-  const [success, setSuccess] = useState('');
   const [error, setError] = useState('');
 
   const navigate = useNavigate();
@@ -34,7 +34,7 @@ const Profile = () => {
       photoURL,
     })
       .then(() => {
-        setSuccess('Profile updated successfully!');
+        toast.success('Profile updated successfully!')
         // alert('Profile updated successfully')
         setError('');
         navigate("/")
@@ -85,7 +85,6 @@ const Profile = () => {
       />
 
       {error && <p className="text-red-500 mb-2">{error}</p>}
-      {success && <p className="text-green-500 mb-2">{success}</p>}
 
       <button onClick={handleSave} className="btn w-full mt-6">
         Save Changes
