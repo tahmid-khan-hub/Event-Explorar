@@ -36,7 +36,7 @@ const UpdateProfile = () => {
       </h2>
       <div className="text-center text-gray-700 mb-6">
         <p><span className="font-bold mr-1">Email: </span> {user.email}</p>
-        <p><span className="font-bold mr-1">PhotoURL: </span> {user.photoURL}</p>
+        <p className="break-all  overflow-x-auto"><span className="font-bold mr-1">PhotoURL: </span> {user.photoURL}</p>
       </div>
       <p className="mt-12 text-center">Want to update your profile Name and PhotoURL? Click <Link to="/profile" className="text-blue-500 font-bold">here</Link> </p>
     </section>

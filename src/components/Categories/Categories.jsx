@@ -51,7 +51,7 @@ const Categories = () => {
               {categoryIcons[category] || (
                 <span className="text-4xl mb-5 block">🎯</span>
               )}
-              <h2 className="text-xl font-semibold">{category}</h2>
+              <h2 className="text-xl -ml-2 md:ml-0 font-semibold">{category}</h2>
             </div>
           </Link>
         ))}
