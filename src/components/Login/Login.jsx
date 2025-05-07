@@ -7,7 +7,7 @@ const Login = () => {
 
   const [show, setShow] = useState(false);
 
-  const {signIn} = use(AuthContext)
+  const {signIn, googleSignIn} = use(AuthContext)
 
   const location = useLocation();
   const navigate = useNavigate();
@@ -29,6 +29,17 @@ const Login = () => {
         console.log(err);
       })
   };
+
+  const handleGoogleLogin = () =>{
+    googleSignIn()
+      .then(res =>{
+        console.log(res);
+        navigate(`${location.state? location.state : "/"}`)
+      })
+      .catch(err =>{
+        console.log(err);
+      })
+  }
 
   return (
     <div className="card bg-base-100 w-full max-w-sm mx-auto mb-56 mt-24 shrink-0 shadow-2xl ">
@@ -64,7 +75,7 @@ const Login = () => {
 
 
           {/* Google */}
-          <button className="btn my-4 bg-white text-black border-[#e5e5e5]">
+          <button onClick={handleGoogleLogin} className="btn my-4 bg-white text-black border-[#e5e5e5]">
             <svg
               aria-label="Google logo"
               width="16"
