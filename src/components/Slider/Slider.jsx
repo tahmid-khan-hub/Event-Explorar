@@ -1,6 +1,9 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -8,8 +11,16 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
 const Slider = () => {
+
+  useEffect(() => {
+        AOS.init({
+        duration: 1000,
+        once: false, 
+      });
+    }, []);
+
   return (
-    <div className="w-11/12 md:max-w-[1309px] mx-auto mt-9">
+    <div data-aos="fade-up" className="w-11/12 md:max-w-[1309px] mx-auto mt-9">
       <Swiper
         modules={[Navigation, Pagination, Scrollbar, A11y]}
         spaceBetween={30}
