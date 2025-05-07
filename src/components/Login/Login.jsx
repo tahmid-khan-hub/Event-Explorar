@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import Loading from "../Loading/Loading";
+import { toast } from "react-toastify";
 
 const Login = () => {
 
@@ -36,13 +37,28 @@ const Login = () => {
 
     console.log(password, email);
 
+    // if (password.length < 6) {
+    //     toast.error("Password must be 6 character or longer");
+    //     return;
+    // } else if (!/[a-z]/.test(password) || !/[A-Z]/.test(password)) {
+    //     toast.error("Password must include both uppercase and lowercase letters");
+    //     return;
+    // }
+
+    // if(password != user.password){
+    //   toast.error("Enter valid password")
+    //   return;
+    // }
+
     signIn(email, password)
       .then(res =>{
         console.log(res);
         navigate(`${location.state? location.state : "/"}`)
+        toast.success("Welcome Back!")
       })
       .catch(err =>{
         console.log(err);
+        toast.error("Failed to login")
       })
   };
 
@@ -51,9 +67,11 @@ const Login = () => {
       .then(res =>{
         console.log(res);
         navigate(`${location.state? location.state : "/"}`)
+        toast.success("Welcome Back!")
       })
       .catch(err =>{
         console.log(err);
+        toast.error("Failed to login")
       })
   }
 

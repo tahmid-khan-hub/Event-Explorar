@@ -3,10 +3,10 @@ import { Link, useNavigate } from "react-router";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import Loading from "../Loading/Loading";
+import { toast } from "react-toastify";
 
 const Register = () => {
   const { createUser, setUser, updateUser, googleSignIn } = use(AuthContext);
-  const [error, setError] = useState("");
   const [show, setShow] = useState(false);
   const [loading, setLoading] = useState(true);
 
@@ -35,13 +35,11 @@ const Register = () => {
     const password = e.target.password.value;
 
     if (password.length < 6) {
-      setError("Password must be 6 character or longer");
+      toast.error("Password must be 6 character or longer");
       return;
     } else if (!/[a-z]/.test(password) || !/[A-Z]/.test(password)) {
-      setError("Password must include both uppercase and lowercase letters");
+      toast.error("Password must include both uppercase and lowercase letters");
       return;
-    } else {
-      setError("");
     }
 
     console.log(name, email, photo, password);
@@ -54,25 +52,30 @@ const Register = () => {
           .then(() => {
             setUser({ ...user, displayName: name, photoURL: photo });
             navigate("/");
+            toast.success("Registration successfull")
           })
           .catch((err) => {
             console.log(err);
             setUser(user);
+            toast.error("Enter valid Name and PhotoURL")
           });
       })
       .catch((err) => {
         console.log(err);
+        toast.error("Already have an account")
       });
   };
 
-  const handleGoogleLogin = () => {
+  const handleGoogleRegister = () => {
     googleSignIn()
       .then((res) => {
         console.log(res);
         navigate(`${location.state ? location.state : "/"}`);
+        toast.success("Registration successfull")
       })
       .catch((err) => {
         console.log(err);
+        toast.error("Already have an account")
       });
   };
 
@@ -131,7 +134,6 @@ const Register = () => {
           </button>
         </form>
 
-        {error && <p className="text-red-500 font-semibold">{error}</p>}
 
         <p className="mt-3 font-semibold ">
           Already have an account? Please{" "}
@@ -142,7 +144,7 @@ const Register = () => {
 
         {/* Google */}
         <button
-          onClick={handleGoogleLogin}
+          onClick={handleGoogleRegister}
           className="btn my-4 bg-white text-black border-[#e5e5e5]"
         >
           <svg
@@ -172,7 +174,7 @@ const Register = () => {
               ></path>
             </g>
           </svg>
-          Login with Google
+          Register with Google
         </button>
       </div>
     </div>
