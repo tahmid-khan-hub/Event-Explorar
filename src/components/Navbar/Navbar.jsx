@@ -62,7 +62,18 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <Link to="/updateProfile"><img className="w-9 h-9 mr-3 object-cover rounded-full " src={`${user? user.photoURL : userimg}`} alt="" title={user ? user.displayName : ""}/></Link>
+      <Link to="/updateProfile">
+        <img
+          className="w-9 h-9 mr-3 object-cover rounded-full"
+          src={user?.photoURL?.trim() || userimg}
+          alt="User Avatar"
+          title={user?.displayName || ""}
+          onError={(e) => {
+            e.target.onerror = null;
+            e.target.src = "https://i.ibb.co.com/9mw72Wtz/image.png";
+          }}
+        />
+      </Link>
         
         {user ? <button onClick={handleLogOut} className="btn btn-primary px-6 py-2 rounded-md text-white bg-blue-500 hover:bg-blue-600">Log Out</button> : <Link to="/login"><button className="btn btn-primary px-6 py-2 rounded-md text-white bg-blue-500 hover:bg-blue-600">Login</button></Link>}
       </div>

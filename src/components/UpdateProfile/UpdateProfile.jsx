@@ -20,7 +20,11 @@ const UpdateProfile = () => {
     <section data-aos="flip-left" className="max-w-2xl mx-auto my-28 md:my-40 p-6 rounded-xl shadow-xl bg-base-200">
       <div className="flex justify-center mb-6">
         <img
-          src={user.photoURL}
+          src={user?.photoURL?.trim() ? user.photoURL : 'https://via.placeholder.com/100'}
+          onError={(e) => {
+            e.target.onerror = null;
+            e.target.src = 'https://i.ibb.co.com/9mw72Wtz/image.png'; 
+          }}
           alt={user.displayName}
           className="w-32 h-32 rounded-full object-cover"
         />

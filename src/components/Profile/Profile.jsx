@@ -51,11 +51,15 @@ const Profile = () => {
   return (
     <div data-aos="fade-up"
     data-aos-anchor-placement="top-center" className="max-w-md mx-auto mt-10 mb-24 p-6 bg-base-200 rounded-lg shadow-xl ">
-      <h2 className="text-2xl font-bold text-center mb-4">Your Profile</h2>
+      <h2 className="text-2xl font-bold text-center mb-4">Update Profile</h2>
 
       <div className="flex justify-center mb-4">
         <img
-          src={photoURL || 'https://via.placeholder.com/100'}
+          src={photoURL?.trim() ? photoURL : 'https://via.placeholder.com/100'}
+          onError={(e) => {
+            e.target.onerror = null;
+            e.target.src = 'https://i.ibb.co.com/9mw72Wtz/image.png'; 
+          }}
           alt="User Avatar"
           className="w-24 h-24 rounded-full object-cover"
         />
