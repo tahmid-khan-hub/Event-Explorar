@@ -6,6 +6,8 @@ import { useEffect } from 'react';
 const Faq = () => {
 
     useEffect(() => {
+        window.scrollTo(0, 0);
+        document.title = "EventExplorer - FaQ"
           AOS.init({
           duration: 1000,
           once: false, 

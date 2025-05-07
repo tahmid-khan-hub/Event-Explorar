@@ -10,6 +10,7 @@ const UpdateProfile = () => {
   const { user } = use(AuthContext);
 
   useEffect(() => {
+        document.title = "EventExplorer - Profile"
         AOS.init({
         duration: 1000,
         once: false, 

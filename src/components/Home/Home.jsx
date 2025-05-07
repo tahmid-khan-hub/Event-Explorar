@@ -8,6 +8,7 @@ const Home = () => {
 
     useEffect(()=>{
         window.scrollTo(0, 0);
+        document.title = "EventExplorer - Home"
     },[])
     return (
         <div>

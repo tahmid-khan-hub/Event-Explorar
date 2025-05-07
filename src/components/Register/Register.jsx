@@ -1,4 +1,4 @@
-import React, { use, useState } from "react";
+import React, { use, useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
@@ -9,6 +9,10 @@ const Register = () => {
   const [show, setShow] = useState(false);
 
   const navigate = useNavigate();
+
+  useEffect(()=>{
+    document.title = "EventExplorer - Register"
+  },[])
 
   const handleRegister = (e) => {
     e.preventDefault();

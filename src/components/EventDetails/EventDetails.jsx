@@ -20,6 +20,7 @@ const EventDetails = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    document.title = "EventExplorer - Details"
 
     AOS.init({
       duration: 1000,

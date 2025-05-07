@@ -7,6 +7,7 @@ import { useEffect } from "react";
 const About = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
+        document.title = "EventExplorer - About"
     
         AOS.init({
           duration: 1000,

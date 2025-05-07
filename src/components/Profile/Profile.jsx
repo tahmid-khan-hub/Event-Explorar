@@ -16,6 +16,7 @@ const Profile = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
+        document.title = "EventExplorer - UpdateProfile"
         AOS.init({
         duration: 1000,
         once: false, 

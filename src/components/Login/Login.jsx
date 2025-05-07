@@ -1,4 +1,4 @@
-import React, { use, useState } from "react";
+import React, { use, useEffect, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
@@ -11,6 +11,10 @@ const Login = () => {
 
   const location = useLocation();
   const navigate = useNavigate();
+
+  useEffect(()=>{
+    document.title = "EventExplorer - Login"
+  },[])
 
   const handleLogin = (e) => {
     e.preventDefault();

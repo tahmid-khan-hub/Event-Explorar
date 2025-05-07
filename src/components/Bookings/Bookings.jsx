@@ -18,6 +18,7 @@ const Bookings = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    document.title = "EventExplorer - Bookings"
 
     AOS.init({
       duration: 1000,
