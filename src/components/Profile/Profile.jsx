@@ -12,7 +12,6 @@ const Profile = () => {
 
   const [displayName, setDisplayName] = useState(user?.displayName || '');
   const [photoURL, setPhotoURL] = useState(user?.photoURL || '');
-  const [error, setError] = useState('');
 
   const navigate = useNavigate();
 
@@ -25,7 +24,12 @@ const Profile = () => {
 
   const handleSave = () => {
     if (!displayName.trim()) {
-      setError('Display name cannot be empty');
+      toast.error('Display name cannot be empty');
+      return;
+    }
+
+    if (!photoURL.trim()) {
+      toast.error('Photo URL cannot be empty');
       return;
     }
 
@@ -36,11 +40,10 @@ const Profile = () => {
       .then(() => {
         toast.success('Profile updated successfully!')
         // alert('Profile updated successfully')
-        setError('');
         navigate("/")
       })
       .catch((err) => {
-        setError('Failed to update profile');
+        toast.error("Failed to update profile")
         console.error(err);
       });
   };
@@ -83,8 +86,6 @@ const Profile = () => {
         readOnly
         className="input input-bordered w-full mb-4 bg-gray-100"
       />
-
-      {error && <p className="text-red-500 mb-2">{error}</p>}
 
       <button onClick={handleSave} className="btn w-full mt-6">
         Save Changes
