@@ -29,9 +29,12 @@ const Slider = () => {
               className="absolute inset-0 w-full h-full object-cover "
             />
             <div className="absolute inset-0 bg-opacity-50"></div>
-            <div className="relative z-10 flex flex-col h-full text-white px-4 justify-center md:ml-16 text-center md:text-left ">
-              <div className="max-w-[1009px]">
-                <h2 className="text-2xl md:text-4xl font-bold mb-5 md:mt-24">
+            <div
+              
+              className="relative z-10 flex flex-col h-full text-white px-4 justify-center md:ml-16 text-center md:text-left "
+            >
+              <div  className="max-w-[1009px]">
+                <h2  className="text-2xl md:text-4xl font-bold mb-5 md:mt-24">
                   Where Ideas Ignite and Innovation Begins
                 </h2>
                 <p className="text-sm md:text-lg ">
@@ -60,13 +63,21 @@ const Slider = () => {
               className="absolute inset-0 w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-opacity-50"></div>
-            <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-black px-4">
-              <div className="max-w-[1009px]">
-                <h2 className="text-2xl md:text-4xl font-bold mb-5 mt-10 md:mt-24">
-                Experience the Power of Art
+            <div
+              
+              className="relative z-10 flex flex-col items-center justify-center h-full text-center text-black px-4"
+            >
+              <div  className="max-w-[1009px]">
+                <h2  className="text-2xl md:text-4xl font-bold mb-5 mt-10 md:mt-24">
+                  Experience the Power of Art
                 </h2>
                 <p className="text-sm md:text-lg mb-10 md:mb-24">
-                Discover exhibitions, workshops, and creative spaces — <span className="hidden md:block">connect with artists, explore diverse styles, express yourself, and be inspired by the limitless world of visual and performing arts.</span>
+                  Discover exhibitions, workshops, and creative spaces —{" "}
+                  <span className="hidden md:block">
+                    connect with artists, explore diverse styles, express
+                    yourself, and be inspired by the limitless world of visual
+                    and performing arts.
+                  </span>
                 </p>
               </div>
             </div>
@@ -82,9 +93,12 @@ const Slider = () => {
               className="absolute inset-0 w-full h-full object-cover "
             />
             <div className="absolute inset-0 bg-opacity-50"></div>
-            <div className="relative z-10 flex flex-col justify-center md:ml-28 text-center md:text-right h-full  text-white px-4">
-              <div className="max-w-[1009px]">
-                <h2 className="text-2xl md:text-4xl font-bold mb-5 ">
+            <div
+              
+              className="relative z-10 flex flex-col justify-center md:ml-28 text-center md:text-right h-full  text-white px-4"
+            >
+              <div  className="max-w-[1009px]">
+                <h2  className="text-2xl md:text-4xl font-bold mb-5 ">
                   Dive Into the World of Gaming
                 </h2>
                 <p className="text-sm md:text-lg ">
