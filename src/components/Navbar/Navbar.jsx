@@ -66,7 +66,7 @@ const Navbar = () => {
       <div className="navbar-end">
       <Link to="/updateProfile">
         <img
-          className="w-9 h-9 mr-3 object-cover rounded-full"
+          className="w-9 h-9 mr-3 object-cover rounded-full ring-2 ring-purple-500 ring-offset-2 ring-offset-white"
           src={user?.photoURL?.trim() || userimg}
           alt="User Avatar"
           title={user?.displayName || ""}

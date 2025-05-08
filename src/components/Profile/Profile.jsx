@@ -51,7 +51,7 @@ const Profile = () => {
 
   return (
     <div data-aos="fade-up"
-    data-aos-anchor-placement="top-center" className="max-w-md mx-auto mt-10 mb-24 p-6 bg-base-200 rounded-lg shadow-xl ">
+    data-aos-anchor-placement="top-center" className="max-w-md mx-auto mt-10 mb-24 p-6 bg-base-200 rounded-lg shadow-xl shadow-purple-400 border-1 border-purple-400">
       <h2 className="text-2xl font-bold text-center mb-4">Update Profile</h2>
 
       <div className="flex justify-center mb-4">
@@ -62,7 +62,7 @@ const Profile = () => {
             e.target.src = 'https://i.ibb.co.com/9mw72Wtz/image.png'; 
           }}
           alt="User Avatar"
-          className="w-24 h-24 rounded-full object-cover"
+          className="w-24 h-24 rounded-full object-cover ring-4 ring-purple-500 ring-offset-2 ring-offset-white"
         />
       </div>
 
@@ -71,7 +71,7 @@ const Profile = () => {
         type="text"
         value={displayName}
         onChange={(e) => setDisplayName(e.target.value)}
-        className="input input-bordered w-full mb-4"
+        className="input input-bordered w-full mb-4 border-purple-400"
         placeholder="Enter display name"
       />
 
@@ -80,7 +80,7 @@ const Profile = () => {
         type="text"
         value={photoURL}
         onChange={(e) => setPhotoURL(e.target.value)}
-        className="input input-bordered w-full mb-4"
+        className="input input-bordered w-full mb-4 border-purple-400"
         placeholder="Enter photo URL"
       />
 
@@ -89,10 +89,10 @@ const Profile = () => {
         type="text"
         value={user?.email}
         readOnly
-        className="input input-bordered w-full mb-4 bg-gray-100"
+        className="input input-bordered w-full mb-4 border-purple-400 bg-gray-100"
       />
 
-      <button onClick={handleSave} className="btn w-full mt-6">
+      <button onClick={handleSave} className="btn w-full mt-6 text-white bg-gradient-to-r from-purple-400 to-purple-500 hover:from-purple-500 hover:to-purple-600">
         Save Changes
       </button>
     </div>

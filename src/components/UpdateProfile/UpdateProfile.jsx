@@ -18,7 +18,7 @@ const UpdateProfile = () => {
     }, []);
 
   return (
-    <section data-aos="flip-left" className="max-w-2xl mx-auto my-28 md:my-40 p-6 rounded-xl shadow-xl bg-base-200">
+    <section data-aos="flip-left" className="max-w-2xl mx-auto my-28 md:my-40 p-6 rounded-xl shadow-xl shadow-purple-400 border-1 border-purple-400 bg-base-200">
       <div className="flex justify-center mb-6">
         <img
           src={user?.photoURL?.trim() ? user.photoURL : 'https://via.placeholder.com/100'}
@@ -27,7 +27,7 @@ const UpdateProfile = () => {
             e.target.src = 'https://i.ibb.co.com/9mw72Wtz/image.png'; 
           }}
           alt={user.displayName}
-          className="w-32 h-32 rounded-full object-cover"
+          className="w-32 h-32 rounded-full object-cover ring-4 ring-purple-500 ring-offset-2 ring-offset-white"
         />
       </div>
 
@@ -38,7 +38,7 @@ const UpdateProfile = () => {
         <p><span className="font-bold mr-1">Email: </span> {user.email}</p>
         <p className="break-all  overflow-x-auto"><span className="font-bold mr-1">PhotoURL: </span> {user.photoURL}</p>
       </div>
-      <p className="mt-12 text-center">Want to update your profile Name and PhotoURL? Click <Link to="/profile" className="text-blue-500 font-bold">here</Link> </p>
+      <p className="mt-12 text-center">Want to update your profile Name and PhotoURL? Click <Link to="/profile" className="text-purple-600 font-bold">here</Link> </p>
     </section>
   );
 };

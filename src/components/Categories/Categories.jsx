@@ -43,10 +43,10 @@ const Categories = () => {
           <Link to={`/Category/${category}`} key={category}>
             <div
               data-aos="fade-up"
-              className="bg-white border-2 border-gray-300 rounded-xl shadow-xl text-center p-7 mx-2 md:mx-0
+              className="bg-white border-2 border-gray-300 rounded-xl shadow-xl shadow-purple-400 text-center p-7 mx-2 md:mx-0
               transform transition-transform delay-150 duration-300 ease-in-out 
              hover:-translate-y-1 hover:scale-110 hover:bg-purple-300 
-             hover:shadow-2xl"
+             hover:shadow-2xl hover:shadow-purple-400"
             >
               {categoryIcons[category] || (
                 <span className="text-4xl mb-5 block">🎯</span>
