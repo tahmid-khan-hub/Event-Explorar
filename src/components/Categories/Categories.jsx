@@ -34,7 +34,7 @@ const Categories = () => {
   return (
     <div data-aos="fade-up">
       <h1 className="text-3xl font-bold text-center mt-24">Categories</h1>
-      <p className="text-center text-gray-600 mt-5 mb-9">
+      <p className="text-center text-gray-600 mt-5 mb-9 px-2 md:px-0">
         Browse through our curated categories to easily find events that match your interests. Whether you're looking to learn a new skill, cheer on your favorite team, or immerse yourself in the local arts scene, our platform provides all the details you need.
       </p>
 
@@ -43,7 +43,7 @@ const Categories = () => {
           <Link to={`/Category/${category}`} key={category}>
             <div
               data-aos="fade-up"
-              className="bg-white border-2 border-gray-300 rounded-xl shadow-xl text-center p-7 
+              className="bg-white border-2 border-gray-300 rounded-xl shadow-xl text-center p-7 mx-2 md:mx-0
               transform transition-transform delay-150 duration-300 ease-in-out 
              hover:-translate-y-1 hover:scale-110 hover:bg-blue-300 
              hover:shadow-2xl"

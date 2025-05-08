@@ -14,13 +14,13 @@ const Card = ({card}) => {
       }, []);
 
     return (
-        <div data-aos="zoom-in" className="bg-white rounded-2xl shadow-md overflow-hidden flex flex-col">
+        <div data-aos="zoom-in" className="bg-white mx-2 md:mx-0 rounded-2xl shadow-md overflow-hidden flex flex-col">
     <img
         src={card.thumbnail}
         alt={card.name}
         className="w-full h-56 object-cover p-3 rounded-2xl mt-3"
     />
-    <div className="p-4 flex flex-col flex-grow">
+    <div className="p-4 flex flex-col flex-grow ">
         <h3 className="text-xl font-semibold">{card.name}</h3>
         <p className="text-sm text-gray-600">{card.date} — {card.location}</p>
         <p className="mt-2 text-gray-700 line-clamp-3">{card.description}</p>

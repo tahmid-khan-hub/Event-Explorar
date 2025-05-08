@@ -26,7 +26,7 @@ const Navbar = () => {
     </>
 
   return (
-    <div className="navbar bg-base-100 ">
+    <div className="navbar bg-purple-200 ">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -54,7 +54,9 @@ const Navbar = () => {
 
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl -ml-3">Event<span className="font-bold text-3xl text-blue-600 -mx-1 mb-1">E</span>xplorer</a>
+        <Link to="/about">
+        <a className="btn btn-ghost hover:bg-purple-300 text-xl -ml-3">Event<span className="font-bold text-3xl text-purple-600 -mx-1 mb-1">E</span>xplorer</a>
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
@@ -75,7 +77,7 @@ const Navbar = () => {
         />
       </Link>
         
-        {user ? <button onClick={handleLogOut} className="btn btn-primary px-6 py-2 rounded-md text-white bg-blue-500 hover:bg-blue-600">Log Out</button> : <Link to="/login"><button className="btn btn-primary px-6 py-2 rounded-md text-white bg-blue-500 hover:bg-blue-600">Login</button></Link>}
+        {user ? <button onClick={handleLogOut} className="btn btn-primary px-6 py-2 rounded-md text-white bg-gradient-to-r from-purple-400 to-purple-500 hover:from-purple-500 hover:to-purple-600">Log Out</button> : <Link to="/login"><button className="btn btn-primary px-6 py-2 rounded-md text-white bg-gradient-to-r from-purple-400 to-purple-500 hover:from-purple-500 hover:to-purple-600">Login</button></Link>}
       </div>
     </div>
   );
