@@ -30,7 +30,7 @@ const About = () => {
     if(loading) return <Loading></Loading>
 
   return (
-    <section data-aos="zoom-in-up" className="p-10 my-36 bg-gray-100 rounded-xl shadow-md max-w-3xl mx-auto ">
+    <section data-aos="zoom-in-up" className="p-10 my-36 bg-gray-100 rounded-xl shadow-xl shadow-purple-400 border-1 border-purple-400 max-w-3xl mx-auto ">
       <h2 className="text-3xl font-bold mb-4 text-center">About Us</h2>
       <p className="text-lg text-gray-700">
         Welcome to <strong>EventExplorer</strong> — your gateway to discovering local events!

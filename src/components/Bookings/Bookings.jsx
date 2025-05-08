@@ -48,7 +48,7 @@ const Bookings = () => {
           <div
             data-aos="zoom-in-up"
             key={event.id}
-            className="card bg-base-200 shadow-xl p-4 rounded-xl mb-40"
+            className="card bg-base-200 shadow-xl shadow-purple-400 p-4 rounded-xl mb-40 border-1 border-purple-500"
           >
             <h2 className="text-2xl font-bold mb-1">{event.name}</h2>
             <p className="text-gray-600 mb-1">📍 {event.location}</p>
@@ -71,7 +71,7 @@ const Bookings = () => {
             <button
               onClick={() => {handleCancelBooking(index), toast.error('Booking Cancelled !'
               )}}
-              className="btn w-[150px] mt-11 md:mt-1 bg-red-500 text-white" 
+              className="btn w-[150px] mt-11 md:mt-1 bg-red-500 text-white hover:bg-red-600" 
             >
               Cancel Booking
             </button>
