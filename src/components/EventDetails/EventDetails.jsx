@@ -39,8 +39,12 @@ const EventDetails = () => {
     const email = e.target.email.value;
 
     console.log(name, email);
+    console.log("User values:", user.displayName, user.email);
 
-    if (name === user.displayName && email === user.email) {
+    if (
+      name.trim().toLowerCase() === user.displayName?.trim().toLowerCase() &&
+      email.trim().toLowerCase() === user.email?.trim().toLowerCase()
+    ) {
       setBooked(true);
       bookEvent(id);
       navigate("/bookings");
@@ -48,11 +52,6 @@ const EventDetails = () => {
       return;
     }
     
-
-    // if(name === user.displayName && email === user.email){
-    //     toast.success("Seat Booked Successfully !");
-    //     return;
-    // }
     else{
       toast.error("Please Enter valid Email and Name");
     }

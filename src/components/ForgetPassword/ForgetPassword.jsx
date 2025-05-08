@@ -44,21 +44,21 @@ const ForgetPassword = () => {
 
   return (
     <div>
-      <div data-aos="zoom-in" className="card bg-base-100 w-full max-w-sm mx-auto mt-24 mb-32 shadow-xl p-6">
+      <div data-aos="zoom-in" className="card bg-base-100 w-full max-w-sm mx-auto mt-24 mb-32 shadow-xl shadow-purple-400 border-1 border-purple-400 p-6">
         <h2 className="text-2xl font-bold text-center mb-4">Reset Password</h2>
         <p className="text-center mb-5">Here, The Reset button will redirect you to Your Email</p>
         <form onSubmit={handleResetPassword}>
           <label className="label">Email</label>
           <input
             type="email"
-            className="input mb-3 w-full"
+            className="input mb-3 w-full border-1 border-purple-400"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
           />
           <button
             type="submit"
-            className="btn btn-primary px-4 mt-5 py-2 text-white w-full"
+            className="btn btn-primary px-4 mt-5 py-2 text-white bg-gradient-to-r from-purple-400 to-purple-500 hover:from-purple-500 hover:to-purple-600 w-full"
           >
             Reset Password
           </button>

@@ -53,6 +53,10 @@ const AuthProvider = ({children}) => {
         }
     },[])
 
+    useEffect(()=>{
+        setBookings({})
+    },[user])
+
     const authData = {
         user,
         setUser,
