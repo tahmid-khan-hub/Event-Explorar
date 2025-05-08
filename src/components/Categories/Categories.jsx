@@ -45,7 +45,7 @@ const Categories = () => {
               data-aos="fade-up"
               className="bg-white border-2 border-gray-300 rounded-xl shadow-xl text-center p-7 mx-2 md:mx-0
               transform transition-transform delay-150 duration-300 ease-in-out 
-             hover:-translate-y-1 hover:scale-110 hover:bg-blue-300 
+             hover:-translate-y-1 hover:scale-110 hover:bg-purple-300 
              hover:shadow-2xl"
             >
               {categoryIcons[category] || (

@@ -4,11 +4,12 @@ import { Link } from 'react-router';
 const CategoryDetails = ({ category }) => {
   useEffect(() => {
     window.scrollTo(0, 0);
+    document.title = "EventExplorer - CategoryDetails"
   }, []);
   return (
     <div
       data-aos="zoom-in-down"
-      className="max-w-11/12 mx-auto my-10 p-6 bg-base-200 rounded-3xl shadow-xl"
+      className="max-w-11/12 mx-auto my-10 p-6 bg-base-200 rounded-3xl shadow-xl shadow-purple-400 border-1 border-purple-400"
     >
       <div className="md:flex gap-6">
         <div className="flex-shrink-0">
@@ -36,7 +37,7 @@ const CategoryDetails = ({ category }) => {
             </span>
           </p>
           <Link to={`/eventDetails/${category.id}`}>
-            <button className="btn mt-1 w-full font-semibold py-2 px-4 rounded-xl ">
+            <button className="btn mt-1 w-full font-semibold py-2 px-4 rounded-xl text-white bg-gradient-to-r from-purple-400 to-purple-500 hover:from-purple-500 hover:to-purple-600">
               View More
             </button>
           </Link>

@@ -37,14 +37,14 @@ const Ratings = () => {
   }, []);
 
   return (
-    <section className="px-4 py-12 bg-gray-50 text-center my-24">
+    <section className="px-4 py-12 bg-purple-200 text-center my-24">
       <h2 className="text-3xl font-bold mb-8">What Our Users Say</h2>
       <div className="flex flex-wrap justify-center gap-6">
         {testimonials.map((user, index) => (
           <div data-aos="flip-up"
             key={index}
             className="bg-white rounded-2xl shadow-md p-6 max-w-xs text-left transition delay-150 duration-300 ease-in-out 
-             hover:-translate-y-1 hover:scale-110 hover:bg-blue-300 
+             hover:-translate-y-1 hover:scale-110 hover:bg-purple-300 
              hover:shadow-2xl"
           >
             <p className="text-gray-700 mb-12">"{user.text}"</p>
