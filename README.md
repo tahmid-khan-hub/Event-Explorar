@@ -1,9 +1,8 @@
-🎉 Event Explorer
+# 🎉 Event Explorer
 A platform that enables users to discover, explore, and stay updated on upcoming local events like conferences, workshops, sports events, art exhibitions, and more. Users can log in, browse through listed events, view detailed information, and share feedback or ratings after attending.
 
-🌐 Live URL
-https://event-explorer.example.com
-(Replace with your actual deployed URL)
+🌐 Live Link
+sprightly-torte-9a8d5c.netlify.app
 
 🚀 Key Features
 🔍 Discover Local Events – Find events in various categories such as tech, art, sports, and community.
@@ -11,8 +10,6 @@ https://event-explorer.example.com
 🧭 Explore Event Details – View descriptions, dates, locations, and organizers.
 
 👤 User Authentication – Log in/sign up to engage with the platform (powered by Firebase).
-
-⭐ Feedback & Ratings – Leave reviews and rate events you’ve attended.
 
 📱 Responsive UI – Fully mobile-friendly and built with Tailwind CSS.
 
@@ -48,6 +45,7 @@ Edit
 {
   "@tailwindcss/vite": "^4.1.5",
   "aos": "^2.3.4",
+  "animejs": "^4.0.2",
   "firebase": "^11.6.1",
   "lucide-react": "^0.507.0",
   "react": "^19.0.0",
