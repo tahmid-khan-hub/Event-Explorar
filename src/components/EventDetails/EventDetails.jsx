@@ -63,7 +63,7 @@ const EventDetails = () => {
     <>
       <div
         data-aos="zoom-in-down"
-        className="max-w-5xl mx-auto my-10 p-6 bg-base-200 rounded-3xl shadow-xl"
+        className="max-w-5xl mx-auto my-10 p-6 bg-base-200 rounded-3xl shadow-xl shadow-purple-400 border-1 border-purple-500"
       >
         <div className="text-center mb-20">
           <h1 className="text-3xl font-bold mb-4">{event.name}</h1>
@@ -110,18 +110,18 @@ const EventDetails = () => {
           <form
             onSubmit={handleReserveSeat}
             data-aos="zoom-in-down"
-            className="fieldset rounded-xl py-11 px-3 md:px-0 w-11/12 md:w-[600px] mx-auto shadow-xl bg-base-200"
+            className="fieldset rounded-xl py-11 px-3 md:px-0 w-11/12 md:w-[600px] mx-auto shadow-xl shadow-purple-400 bg-base-200 border-1 border-purple-500"
           >
             <input
               type="text"
-              className="input mb-3 mx-auto"
+              className="input mb-3 mx-auto border-purple-400"
               name="name"
               placeholder="Enter your Name"
               required
             />
             <input
               type="email"
-              className="input mb-3 mx-auto"
+              className="input mb-3 mx-auto border-purple-400"
               name="email"
               placeholder="Enter your Email"
               required
@@ -133,7 +133,7 @@ const EventDetails = () => {
                 Seat already booked
               </button>
             ) : (
-              <button className="btn mt-5 w-[200px] btn-primary px-6 py-2 rounded-md text-white bg-blue-500 hover:bg-blue-600 mx-auto">
+              <button className="btn mt-5 w-[200px] btn-primary px-6 py-2 rounded-md text-white bg-gradient-to-r from-purple-400 to-purple-500 hover:from-purple-500 hover:to-purple-600 mx-auto">
                 Reserve Your Seat Now
               </button>
             )}

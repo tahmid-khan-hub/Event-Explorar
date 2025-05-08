@@ -30,7 +30,7 @@ const UpcomingEvents = () => {
                 displayCard.map((card, index) => <Card key={index} card={card}></Card>)
             }
             </div>
-            <button className='btn md:ml-[45%] lg:ml-[47%] mt-11 ml-2 ' onClick={()=> {
+            <button className='btn md:ml-[45%] lg:ml-[47%] mt-11 ml-2 text-white bg-gradient-to-r from-purple-400 to-purple-500 hover:from-purple-500 hover:to-purple-600' onClick={()=> {
                 setShowAll(prev => !prev)
                 if(showAll) window.scrollTo(0,0)
             }}>{showAll?"Show Less ":"Show All "}</button>

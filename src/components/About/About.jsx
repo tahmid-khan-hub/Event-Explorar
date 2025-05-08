@@ -38,7 +38,7 @@ const About = () => {
         We’re passionate about connecting people to meaningful experiences and supporting local communities.
       </p>
       <div className="text-center mt-6">
-        <Link to="/"><button className="btn btn-primary px-6 py-2 rounded-md text-white bg-blue-500 hover:bg-blue-600">
+        <Link to="/"><button className="btn btn-primary px-6 py-2 rounded-md text-white bg-gradient-to-r from-purple-400 to-purple-500 hover:from-purple-500 hover:to-purple-600">
           Explore Events
         </button></Link>
       </div>

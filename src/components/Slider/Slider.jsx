@@ -57,7 +57,7 @@ const Slider = () => {
                     to the next level.
                   </span>
                 </p>
-                <button className="hidden md:block btn mb-10 md:mb-24 mt-3">
+                <button className="hidden md:block btn mb-10 md:mb-24 mt-3 bg-gradient-to-r from-purple-400 to-purple-500 hover:from-purple-500 hover:to-purple-600">
                   Get Started
                 </button>
               </div>

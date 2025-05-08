@@ -28,7 +28,7 @@ const Card = ({card}) => {
             <span className="text-sm text-blue-600 font-medium">{card.category}</span>
         </div>
         <Link to={`/eventDetails/${card.id}`}>
-        <button className="btn mt-8 w-full btn-primary font-semibold py-2 px-6 rounded-md text-white bg-blue-500 hover:bg-blue-600">
+        <button className="btn mt-8 w-full btn-primary font-semibold py-2 px-6 rounded-md text-white bg-gradient-to-r from-purple-400 to-purple-500 hover:from-purple-500 hover:to-purple-600">
             View More
         </button>
         </Link>
