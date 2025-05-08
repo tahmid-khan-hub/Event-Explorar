@@ -63,7 +63,7 @@ const EventDetails = () => {
     <>
       <div
         data-aos="zoom-in-down"
-        className="max-w-5xl mx-auto my-10 p-6 bg-base-200 rounded-3xl shadow-xl shadow-purple-400 border-1 border-purple-500"
+        className="max-w-5xl mx-auto my-10 p-6 bg-base-200 rounded-3xl shadow-xl shadow-purple-400 border-1 border-purple-500 "
       >
         <div className="text-center mb-20">
           <h1 className="text-3xl font-bold mb-4">{event.name}</h1>

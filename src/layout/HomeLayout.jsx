@@ -10,7 +10,7 @@ const HomeLayout = () => {
 
         <ToastContainer/>
 
-        <div className='w-full md:max-w-11/12 mx-auto bg-purple-200 px-0 md:px-11'>
+        <div className='w-full md:max-w-[1500px] mx-auto bg-purple-200 px-0 md:px-11'>
             <Navbar></Navbar>
             <Outlet></Outlet>
             <Footer></Footer>
