@@ -78,14 +78,14 @@ const Login = () => {
   };  
 
   return (
-    <div data-aos="zoom-in" className="card bg-base-100 w-full max-w-sm mx-auto mb-56 mt-24 shrink-0 shadow-2xl ">
+    <div data-aos="zoom-in" className="card bg-base-100 w-full max-w-sm mx-auto mb-56 mt-24 shrink-0 shadow-2xl shadow-purple-400 border-1 border-purple-400">
       <div className="card-body">
         <h1 className="text-2xl font-bold mb-3 text-center ">Login now!</h1>
         <form onSubmit={handleLogin} className="fieldset">
           <label className="label">Email</label>
           <input
             type="email"
-            className="input mb-3"
+            className="input mb-3 border-1 border-purple-400"
             name="email"
             placeholder="Enter your Email"
             value={email}
@@ -96,7 +96,7 @@ const Login = () => {
           <div className="flex relative">
             <input
               type={`${show ? "text" : "password"}`}
-              className="input mb-3"
+              className="input mb-3 border-1 border-purple-400"
               name="password"
               placeholder="Enter your Password"
               required
@@ -109,11 +109,11 @@ const Login = () => {
             <a onClick={handleForgetPassword} className="link link-hover ">Forgot password?</a>
           
 
-          <button className="btn btn-primary px-6 py-2 rounded-md text-white bg-blue-500 hover:bg-blue-600 mt-4">Login</button>
+          <button className="btn btn-primary px-6 py-2 rounded-md text-white bg-gradient-to-r from-purple-400 to-purple-500 hover:from-purple-500 hover:to-purple-600 mt-4">Login</button>
 
 
           {/* Google */}
-          <button onClick={handleGoogleLogin} className="btn my-4 bg-white text-black border-[#e5e5e5]">
+          <button onClick={handleGoogleLogin} className="btn my-4 text-white bg-gradient-to-r from-purple-400 to-purple-500 hover:from-purple-500 hover:to-purple-600 ">
             <svg
               aria-label="Google logo"
               width="16"
@@ -146,7 +146,7 @@ const Login = () => {
         </form>
         <p className="mt-3 font-semibold ">
           New to this site? Please{" "}
-          <Link to={`/register`} className="text-blue-500 font-bold">Register</Link>
+          <Link to={`/register`} className="text-purple-600 font-bold">Register</Link>
         </p>
       </div>
     </div>

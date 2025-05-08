@@ -97,7 +97,7 @@ const Register = () => {
           <label className="label">Name</label>
           <input
             type="text"
-            className="input mb-3"
+            className="input mb-3 border-1 border-purple-400"
             name="name"
             placeholder="Enter your name"
             required
@@ -106,7 +106,7 @@ const Register = () => {
           <label className="label">PhotoURL</label>
           <input
             type="text"
-            className="input mb-3"
+            className="input mb-3 border-1 border-purple-400"
             name="photo"
             placeholder="Enter your PhotoURL"
             required
@@ -115,7 +115,7 @@ const Register = () => {
           <label className="label">Email</label>
           <input
             type="email"
-            className="input mb-3"
+            className="input mb-3 border-1 border-purple-400"
             name="email"
             placeholder="Enter your Email"
             required
@@ -125,7 +125,7 @@ const Register = () => {
           <div className="flex relative">
             <input
               type={`${show ? "text" : "password"}`}
-              className="input mb-3"
+              className="input mb-3 border-1 border-purple-400"
               name="password"
               placeholder="Enter your Password"
               required
@@ -138,7 +138,7 @@ const Register = () => {
             </span>
           </div>
 
-          <button className="btn btn-primary px-6 py-2 rounded-md text-white bg-blue-500 hover:bg-blue-600 mt-4">
+          <button className="btn btn-primary px-6 py-2 rounded-md text-white bg-gradient-to-r from-purple-400 to-purple-500 hover:from-purple-500 hover:to-purple-600 mt-4">
             Register
           </button>
         </form>
@@ -146,7 +146,7 @@ const Register = () => {
 
         <p className="mt-3 font-semibold ">
           Already have an account? Please{" "}
-          <Link to={`/login`} className="text-blue-500 font-bold">
+          <Link to={`/login`} className="text-purple-600 font-bold">
             Login
           </Link>
         </p>
@@ -154,7 +154,7 @@ const Register = () => {
         {/* Google */}
         <button
           onClick={handleGoogleRegister}
-          className="btn my-4 bg-white text-black border-[#e5e5e5]"
+          className="btn my-4 text-white bg-gradient-to-r from-purple-400 to-purple-500 hover:from-purple-500 hover:to-purple-600"
         >
           <svg
             aria-label="Google logo"
