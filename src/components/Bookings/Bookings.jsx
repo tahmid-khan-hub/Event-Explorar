@@ -78,7 +78,7 @@ const Bookings = () => {
           </div>
         ))
       ) : (
-        <div data-aos="zoom-in-up" className="text-center text-xl text-gray-500 mt-20">
+        <div data-aos="zoom-in-up" className="text-center text-xl text-gray-500 mb-40 mt-20">
           🚫 No reserved seat booked yet.
         </div>
       )}
