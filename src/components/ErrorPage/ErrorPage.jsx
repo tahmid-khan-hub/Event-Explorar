@@ -6,7 +6,7 @@ const ErrorPage = () => {
         <div className='flex flex-col items-center justify-center h-screen'>
             <img src="https://i.ibb.co.com/dwx05fqn/shutterstock-479042983.jpg" />
             <p className='text-center text-2xl my-4'>Oops! The page you're looking for doesn't exist</p>
-            <Link className="block mx-auto w-fit" to={`/`}><button className='btn bg-green-600 text-white w-[200px]'>Go Back Home</button></Link>
+            <Link className="block mx-auto w-fit" to={`/`}><button className='btn text-white bg-gradient-to-r from-purple-400 to-purple-500 hover:from-purple-500 hover:to-purple-600 w-[200px] shadow-xl shadow-purple-300'>Go Back Home</button></Link>
         </div>
     );
 };

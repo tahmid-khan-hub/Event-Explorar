@@ -1,12 +1,60 @@
-# React + Vite
+🎉 Event Explorer
+A platform that enables users to discover, explore, and stay updated on upcoming local events like conferences, workshops, sports events, art exhibitions, and more. Users can log in, browse through listed events, view detailed information, and share feedback or ratings after attending.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🌐 Live URL
+https://event-explorer.example.com
+(Replace with your actual deployed URL)
 
-Currently, two official plugins are available:
+🚀 Key Features
+🔍 Discover Local Events – Find events in various categories such as tech, art, sports, and community.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🧭 Explore Event Details – View descriptions, dates, locations, and organizers.
 
-## Expanding the ESLint configuration
+👤 User Authentication – Log in/sign up to engage with the platform (powered by Firebase).
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+⭐ Feedback & Ratings – Leave reviews and rate events you’ve attended.
+
+📱 Responsive UI – Fully mobile-friendly and built with Tailwind CSS.
+
+✨ Animated Interactions – Smooth page animations using AOS and Swiper.
+
+🛠 Tech Stack & Packages
+Frontend
+React 19
+
+React Router 7 – For seamless navigation
+
+Tailwind CSS 4 – For rapid UI development
+
+Vite – Fast build tool and dev server
+
+Lucide React – Beautiful icons
+
+React Icons – Comprehensive icon collection
+
+Swiper.js – Touch slider for carousels
+
+AOS – Animate on scroll library
+
+React Toastify – For clean toast notifications
+
+Backend/Services
+Firebase – Authentication and backend integration
+
+📦 NPM Packages Used
+json
+Copy
+Edit
+{
+  "@tailwindcss/vite": "^4.1.5",
+  "aos": "^2.3.4",
+  "firebase": "^11.6.1",
+  "lucide-react": "^0.507.0",
+  "react": "^19.0.0",
+  "react-dom": "^19.0.0",
+  "react-icons": "^5.5.0",
+  "react-router": "^7.5.3",
+  "react-toastify": "^11.0.5",
+  "swiper": "^11.2.6",
+  "tailwindcss": "^4.1.5"
+}
