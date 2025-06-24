@@ -2,7 +2,7 @@
 A platform that enables users to discover, explore, and stay updated on upcoming local events like conferences, workshops, sports events, art exhibitions, and more. Users can log in, browse through listed events, view detailed information, and share feedback or ratings after attending.
 
 🌐 Live Link
-sprightly-torte-9a8d5c.netlify.app
+[sprightly-torte-9a8d5c.netlify.app](https://sprightly-torte-9a8d5c.netlify.app/)
 
 🚀 Key Features
 🔍 Discover Local Events – Find events in various categories such as tech, art, sports, and community.
