@@ -33,7 +33,7 @@
 1. **Clone the repository**
    ```bash
    git clone https://github.com/tahmid-khan-hub/Event-Explorar.git
-   cd event-explorer
+   cd Event-Explorar
    ```
 
 2. **Install dependencies**
