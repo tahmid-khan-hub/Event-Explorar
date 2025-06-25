@@ -32,7 +32,7 @@
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-username/event-explorer.git  
+   git clone https://github.com/tahmid-khan-hub/Event-Explorar.git
    cd event-explorer
    ```
 
