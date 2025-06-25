@@ -1,58 +1,55 @@
 # 🎉 Event Explorer
-A platform that enables users to discover, explore, and stay updated on upcoming local events like conferences, workshops, sports events, art exhibitions, and more. Users can log in, browse through listed events, view detailed information, and share feedback or ratings after attending.
 
-🌐 Live Link
-[sprightly-torte-9a8d5c.netlify.app](https://sprightly-torte-9a8d5c.netlify.app/)
+### 📝 Project Overview  
+**Event Explorer** is a user-friendly platform that enables users to discover, explore, and stay updated on local events such as conferences, workshops, sports events, art exhibitions, and more. Users can browse listed events, view detailed information, and book seats to attend.
 
-🚀 Key Features
-🔍 Discover Local Events – Find events in various categories such as tech, art, sports, and community.
+---
 
-🧭 Explore Event Details – View descriptions, dates, locations, and organizers.
+### 🛠 Tech Stack & Dependencies  
+- **React 19** – Frontend library for interactive UI  
+- **Vite** – Lightning-fast build tool and development server  
+- **Tailwind CSS 4** – Utility-first CSS framework  
+- **Firebase** – Authentication and backend integration  
+- **React Router 7** – Navigation and routing between pages  
+- **Swiper.js** – Touch slider library for interactive carousels  
+- **AOS (Animate On Scroll)** – Smooth scroll-triggered animations  
+- **Lucide React** – Elegant and modern icon library  
+- **React Icons** – Comprehensive icon set for UI elements  
+- **React Toastify** – Toast notifications for user feedback  
+- **Anime.js** – Lightweight animation engine
 
-👤 User Authentication – Log in/sign up to engage with the platform (powered by Firebase).
+---
 
-📱 Responsive UI – Fully mobile-friendly and built with Tailwind CSS.
+### ✨ Key Features  
+- **🔍 Discover Local Events** – Find events across various categories including tech, art, sports, and more  
+- **🧭 Explore Event Details** – View full event descriptions, schedules, locations, and organizer info  
+- **📱 Responsive UI** – Mobile-first design with Tailwind CSS  
+- **✨ Animated Interactions** – Engaging UI experience with AOS and Swiper
 
-✨ Animated Interactions – Smooth page animations using AOS and Swiper.
+---
 
-🛠 Tech Stack & Packages
-Frontend
-React 19
+### 🖥️ How to Run Locally  
 
-React Router 7 – For seamless navigation
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/your-username/event-explorer.git  
+   cd event-explorer
+   ```
 
-Tailwind CSS 4 – For rapid UI development
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-Vite – Fast build tool and dev server
+3. **Set up Firebase**  
+   Create a `firebase.config.js` file inside the `src` directory and add your Firebase configuration.
 
-Lucide React – Beautiful icons
+4. **Run the development server**
+   ```bash
+   npm run dev
+   ```
 
-React Icons – Comprehensive icon collection
+---
 
-Swiper.js – Touch slider for carousels
-
-AOS – Animate on scroll library
-
-React Toastify – For clean toast notifications
-
-Backend/Services
-Firebase – Authentication and backend integration
-
-📦 NPM Packages Used
-json
-Copy
-Edit
-{
-  "@tailwindcss/vite": "^4.1.5",
-  "aos": "^2.3.4",
-  "animejs": "^4.0.2",
-  "firebase": "^11.6.1",
-  "lucide-react": "^0.507.0",
-  "react": "^19.0.0",
-  "react-dom": "^19.0.0",
-  "react-icons": "^5.5.0",
-  "react-router": "^7.5.3",
-  "react-toastify": "^11.0.5",
-  "swiper": "^11.2.6",
-  "tailwindcss": "^4.1.5"
-}
+### 🔗 Live Link  
+- 🌐 [Live Site](https://sprightly-torte-9a8d5c.netlify.app)
